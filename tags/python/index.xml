@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on blog.ducatillon.net</title>
+    <link>francoiducat.github.io.git/tags/python/</link>
+    <description>Recent content in python on blog.ducatillon.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Jan 2021 14:11:07 +0100</lastBuildDate><atom:link href="francoiducat.github.io.git/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compress PDF Off line easily with the command line</title>
+      <link>francoiducat.github.io.git/posts/compress-pdf-offline-easily-with-the-command-line/</link>
+      <pubDate>Sat, 23 Jan 2021 14:11:07 +0100</pubDate>
+      
+      <guid>francoiducat.github.io.git/posts/compress-pdf-offline-easily-with-the-command-line/</guid>
+      <description>I found this great tool to compress pdf (python script) from the command line.
+Requirements Make sure you have ghoscript installed. If not just run brew install ghoscript
+How to Copy source files from https://github.com/hkdb/cpdf to your bin directory (that’s defined in your env) eg. /usr/local/bin if you are on OSX.
+Then from your favorite terminal, just use one of the commands described in the readme of the project.
+Basic command:</description>
+    </item>
+    
+  </channel>
+</rss>

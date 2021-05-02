@@ -1,42 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>francoiducat.github.io.git/posts/compress-pdf-offline-easily-with-the-command-line/</loc>
+    <loc>https://francoiducat.github.io/posts/compress-pdf-offline-easily-with-the-command-line/</loc>
     <lastmod>2021-01-23T14:11:07+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/</loc>
+  </url><url>
+    <loc>https://francoiducat.github.io/</loc>
     <lastmod>2021-01-23T14:11:07+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/tags/python/</loc>
+  </url><url>
+    <loc>https://francoiducat.github.io/tags/python/</loc>
     <lastmod>2021-01-23T14:11:07+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/tags/</loc>
+  </url><url>
+    <loc>https://francoiducat.github.io/tags/</loc>
     <lastmod>2021-01-23T14:11:07+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/posts/</loc>
+  </url><url>
+    <loc>https://francoiducat.github.io/posts/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://francoiducat.github.io/about/</loc>
+  </url><url>
+    <loc>https://francoiducat.github.io/categories/</loc>
+  </url><url>
+    <loc>https://francoiducat.github.io/contact/</loc>
   </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/about/</loc>
-  </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>francoiducat.github.io.git/contact/</loc>
-  </url>
-  
 </urlset>

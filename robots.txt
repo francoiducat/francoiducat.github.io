@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://localhost:8888/publicdoks/sitemap.xml
+Sitemap: https://francoiducat.github.io/sitemap.xml

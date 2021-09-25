@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FDUCAT Notebook</title>
+    <link>https://francoiducat.github.io/docs/web/</link>
+    <description>Recent content on FDUCAT Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://francoiducat.github.io/docs/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://francoiducat.github.io/docs/web/embed-pdf-in-html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/docs/web/embed-pdf-in-html/</guid>
+      <description>Afficher un pdf dans une page HTML #  Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.
+Vous pouvez par exemple utiliser les services de scribd.com ou tout simplement insérer le code HTML suivant dans votre page :
+&amp;lt;embed src=&amp;#34;https://drive.google.com/viewerng/viewer?embedded=true&amp;amp;url=static/hugo_framework.pdf&amp;#34; width=&amp;#34;500&amp;#34; height=&amp;#34;375&amp;#34;&amp;gt; </description>
+    </item>
+    
+  </channel>
+</rss>

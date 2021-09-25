@@ -14,8 +14,9 @@
       <guid>https://francoiducat.github.io/docs/web/embed-pdf-in-html/</guid>
       <description>Afficher un pdf dans une page HTML #  Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.
 Vous pouvez par exemple utiliser les services de scribd.com ou tout simplement insérer le code HTML suivant dans votre page :
-&amp;lt;embed src=&amp;#34;https://yoursite.com/yourdocument.pdf&amp;#34; width=&amp;#34;100%&amp;#34; height=&amp;#34;400p&amp;#34;&amp;gt; Voici le résultat :
-  </description>
+&amp;lt;embed src=&amp;#34;https://yoursite.com/yourdocument.pdf&amp;#34; width=&amp;#34;100%&amp;#34; height=&amp;#34;400p&amp;#34;&amp;gt; or
+&amp;lt;iframe src=&amp;#34;https://docs.google.com/viewer?url=https://yoursite.com/pdf/yourdocument.pdf&amp;amp;embedded=true&amp;#34; style=&amp;#34;width:100%; height:500px;&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt; Voici le résultat :
+ </description>
     </item>
     
   </channel>

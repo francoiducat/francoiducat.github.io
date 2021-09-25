@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Compress PDF offline with ghostscript #  I found this great tool to compress pdf (python script) from the command line.
+Requirements #  Make sure you have ghoscript installed. If not just run brew install ghoscript
+How to #  Copy source files from https://github.com/hkdb/cpdf to your bin directory (that’s defined in your env) eg. /usr/local/bin if you are on OSX.
+Then from your favorite terminal, just use one of the commands described in the readme of the project.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Compress PDF offline with ghostscript #  I found this great tool to compress pdf (python script) from the command line.
+Requirements #  Make sure you have ghoscript installed. If not just run brew install ghoscript
+How to #  Copy source files from https://github.com/hkdb/cpdf to your bin directory (that’s defined in your env) eg. /usr/local/bin if you are on OSX.
+Then from your favorite terminal, just use one of the commands described in the readme of the project." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Compress Pdf Offline | FDUCAT Notebook</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.5492228bee689bf9903298a330902131dae2d36ed70041f35a31127afa11d074.js" integrity="sha256-VJIii&#43;5om/mQMpijMJAhMdri027XAEHzWjESevoR0HQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>FDUCAT Notebook</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Java</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/java/springboot-graphql-client/" class="">Springboot Graphql Client</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Productivity</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" class=" active">Compress Pdf Offline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/every-day-git-commands/" class="">Every Day Git Commands</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Compress Pdf Offline</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#compress-pdf-offline-with-ghostscript">Compress PDF offline with ghostscript</a>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#how-to">How to</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="compress-pdf-offline-with-ghostscript">
+  Compress PDF offline with ghostscript
+  <a class="anchor" href="#compress-pdf-offline-with-ghostscript">#</a>
+</h2>
+<p><img src="https://www.ghostscript.com/images/ghostscript_logo.png" alt="Ghoscript_logo" /></p>
+<p>I found this great tool to compress pdf (python script) from the command line.</p>
+<h3 id="requirements">
+  Requirements
+  <a class="anchor" href="#requirements">#</a>
+</h3>
+<p>Make sure you have <a href="https://www.ghostscript.com">ghoscript</a> installed. If not just run <code>brew install ghoscript</code></p>
+<h3 id="how-to">
+  How to
+  <a class="anchor" href="#how-to">#</a>
+</h3>
+<p>Copy source files from <code>https://github.com/hkdb/cpdf</code> to your bin directory (that’s defined in your env) eg. <code>/usr/local/bin</code> if you are on OSX.</p>
+<p>Then from your favorite terminal, just use one of the commands described in the <code>readme</code> of the project.</p>
+<p>Basic command:</p>
+<pre tabindex="0"><code>cpdf ebook in.pdf out.pdf
+</code></pre><p>That’s all.</p>
+<p>Thank you <a href="https://github.com/hkdb">hkdb</a>!</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#compress-pdf-offline-with-ghostscript">Compress PDF offline with ghostscript</a>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#how-to">How to</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

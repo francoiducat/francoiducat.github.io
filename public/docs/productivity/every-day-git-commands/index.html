@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Every day Git commands for developers #  Here are some day to day useful git commands
+Show all remotes #  This show origin and upstream remotes
+git remote -v git remote show origin #shows branches, tags etc. git remote show upstream #shows branches, tags etc. Add upstream remote #  (vs origin remote)
+git remote add upstream git@github.com:username/git-repo.git Remove a remote file #  Remove a remote file or directory from a Git repository without deleting it from the local filesystem">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Every day Git commands for developers #  Here are some day to day useful git commands
+Show all remotes #  This show origin and upstream remotes
+git remote -v git remote show origin #shows branches, tags etc. git remote show upstream #shows branches, tags etc. Add upstream remote #  (vs origin remote)
+git remote add upstream git@github.com:username/git-repo.git Remove a remote file #  Remove a remote file or directory from a Git repository without deleting it from the local filesystem" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francoiducat.github.io/docs/productivity/every-day-git-commands/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Every Day Git Commands | FDUCAT Notebook</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.5492228bee689bf9903298a330902131dae2d36ed70041f35a31127afa11d074.js" integrity="sha256-VJIii&#43;5om/mQMpijMJAhMdri027XAEHzWjESevoR0HQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>FDUCAT Notebook</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Java</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/java/springboot-graphql-client/" class="">Springboot Graphql Client</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Productivity</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" class="">Compress Pdf Offline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/every-day-git-commands/" class=" active">Every Day Git Commands</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Every Day Git Commands</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#show-all-remotes">Show all remotes</a></li>
+        <li><a href="#add-upstream-remote">Add upstream remote</a></li>
+        <li><a href="#remove-a-remote-file">Remove a remote file</a></li>
+        <li><a href="#shortcut-add--commit-all-files">Shortcut add &amp; commit all files</a></li>
+        <li><a href="#show-git-history">Show git history</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="every-day-git-commands-for-developers">
+  Every day Git commands for developers
+  <a class="anchor" href="#every-day-git-commands-for-developers">#</a>
+</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" alt="git" /></p>
+<p>Here are some day to day useful git commands</p>
+<h3 id="show-all-remotes">
+  Show all remotes
+  <a class="anchor" href="#show-all-remotes">#</a>
+</h3>
+<p>This show origin and upstream remotes</p>
+<pre tabindex="0"><code>git remote -v
+git remote show origin #shows branches, tags etc.
+git remote show upstream #shows branches, tags etc.
+</code></pre><h3 id="add-upstream-remote">
+  Add upstream remote
+  <a class="anchor" href="#add-upstream-remote">#</a>
+</h3>
+<p>(vs origin remote)</p>
+<pre tabindex="0"><code>git remote add upstream git@github.com:username/git-repo.git
+</code></pre><h3 id="remove-a-remote-file">
+  Remove a remote file
+  <a class="anchor" href="#remove-a-remote-file">#</a>
+</h3>
+<p>Remove a remote file or directory from a Git repository without deleting it from the local filesystem</p>
+<h4 id="for-single-file">
+  For single file:
+  <a class="anchor" href="#for-single-file">#</a>
+</h4>
+<pre tabindex="0"><code>git rm --cached myremotefiletodelete.log
+git commit -m &quot;remove file from repo&quot;
+git push
+</code></pre><h4 id="for-single-directory">
+  For single directory:
+  <a class="anchor" href="#for-single-directory">#</a>
+</h4>
+<pre tabindex="0"><code>git rm --cached -r myremotedirectortytodelete
+git commit -m &quot;remove folder from repo&quot;
+git push
+</code></pre><h3 id="shortcut-add--commit-all-files">
+  Shortcut add &amp; commit all files
+  <a class="anchor" href="#shortcut-add--commit-all-files">#</a>
+</h3>
+<p>Without shortcut</p>
+<pre tabindex="0"><code>git add fileToAdd.txt
+git commit -m &quot;commit message&quot;
+</code></pre><h3 id="show-git-history">
+  Show git history
+  <a class="anchor" href="#show-git-history">#</a>
+</h3>
+<p>using pretty format</p>
+<pre tabindex="0"><code>git log --pretty=format:&quot;%h - %an, %ar : %s&quot;
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#show-all-remotes">Show all remotes</a></li>
+        <li><a href="#add-upstream-remote">Add upstream remote</a></li>
+        <li><a href="#remove-a-remote-file">Remove a remote file</a></li>
+        <li><a href="#shortcut-add--commit-all-files">Shortcut add &amp; commit all files</a></li>
+        <li><a href="#show-git-history">Show git history</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

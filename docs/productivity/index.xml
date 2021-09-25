@@ -30,5 +30,15 @@ git remote -v git remote show origin #shows branches, tags etc. git remote show 
 git remote add upstream git@github.com:username/git-repo.git Remove a remote file #  Remove a remote file or directory from a Git repository without deleting it from the local filesystem</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</guid>
+      <description>Google spreadsheet tricks #  Remove characters from a string in a cell with Google spreadsheet #  Goal #  Remove the first 2 characters from a string in cell D1 :
+ =RIGHT(D1,LEN(D1)-2) Explanations #   LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return.</description>
+    </item>
+    
   </channel>
 </rss>

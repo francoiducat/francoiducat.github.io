@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="Google spreadsheet tricks #  Remove characters from a string in a cell with Google spreadsheet #  Goal #  Remove the first 2 characters from a string in cell D1 :
+ =RIGHT(D1,LEN(D1)-2) Explanations #   LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://francoiducat.github.io/docs/java/" />
+<meta property="og:description" content="Google spreadsheet tricks #  Remove characters from a string in a cell with Google spreadsheet #  Goal #  Remove the first 2 characters from a string in cell D1 :
+ =RIGHT(D1,LEN(D1)-2) Explanations #   LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/" /><meta property="article:section" content="docs" />
 
-<title>Java | FDUCAT Notebook</title>
+
+
+<title>Google Spreadsheet Tricks | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
@@ -26,7 +30,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<link rel="alternate" type="application/rss+xml" href="https://francoiducat.github.io/docs/java/index.xml" title="FDUCAT Notebook" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -148,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/" class="">Google Spreadsheet Tricks</a>
+    <a href="https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/" class=" active">Google Spreadsheet Tricks</a>
   
 
         </li>
@@ -195,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Java</strong>
+  <strong>Google Spreadsheet Tricks</strong>
 
   <label for="toc-control">
     
@@ -209,7 +212,16 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#remove-characters-from-a-string-in-a-cell-with-google-spreadsheet">Remove characters from a string in a cell with Google spreadsheet</a>
+      <ul>
+        <li><a href="#goal">Goal</a></li>
+        <li><a href="#explanations">Explanations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -220,7 +232,33 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><h1 id="google-spreadsheet-tricks">
+  Google spreadsheet tricks
+  <a class="anchor" href="#google-spreadsheet-tricks">#</a>
+</h1>
+<h2 id="remove-characters-from-a-string-in-a-cell-with-google-spreadsheet">
+  Remove characters from a string in a cell with Google spreadsheet
+  <a class="anchor" href="#remove-characters-from-a-string-in-a-cell-with-google-spreadsheet">#</a>
+</h2>
+<h3 id="goal">
+  Goal
+  <a class="anchor" href="#goal">#</a>
+</h3>
+<p>Remove the first 2 characters from a string in cell D1 :</p>
+<pre tabindex="0"><code> =RIGHT(D1,LEN(D1)-2)
+</code></pre><h3 id="explanations">
+  Explanations
+  <a class="anchor" href="#explanations">#</a>
+</h3>
+<ul>
+<li><code>LEN(D1)</code> returns the length of the string in a cell.</li>
+<li><code>RIGHT(D1, X)</code> returns a substring from the end.
+First argument is the string.
+Seconde argument is the length of the substring to return.</li>
+</ul>
+<p>Alternatively, to remove the last 2 characters, use :</p>
+<pre tabindex="0"><code> =LEFT(D1,LEN(D1)-2)
+</code></pre></article>
  
       
 
@@ -245,6 +283,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -255,7 +297,16 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#remove-characters-from-a-string-in-a-cell-with-google-spreadsheet">Remove characters from a string in a cell with Google spreadsheet</a>
+      <ul>
+        <li><a href="#goal">Goal</a></li>
+        <li><a href="#explanations">Explanations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

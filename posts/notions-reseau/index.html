@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Notions de bases en réseau #  Réseau (informatique) #  Ensemble d&rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:
+ Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc.  Cables réseau ou cable ethernet: #   UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux  Carte réseau #  Matériel qui permet d&rsquo;accéder au réseau.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Notions de bases en réseau" />
+<meta property="og:description" content="Notions de bases en réseau #  Réseau (informatique) #  Ensemble d&rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:
+ Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc.  Cables réseau ou cable ethernet: #   UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux  Carte réseau #  Matériel qui permet d&rsquo;accéder au réseau." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francoiducat.github.io/posts/notions-reseau/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2011-01-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2011-01-11T00:00:00+00:00" />
+
+<title>Notions de bases en réseau | FDUCAT Notebook</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.07e5a386700093abab3cc42e8f0af4f1616c1f178a5f7c18244fe6d7446ae3e5.js" integrity="sha256-B&#43;WjhnAAk6urPMQujwr08WFsHxeKX3wYJE/m10Rq4&#43;U=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-SQK9KWNWZY', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>FDUCAT Notebook</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Java</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/java/springboot-graphql-client/" class="">Springboot Graphql Client</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Productivity</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" class="">Compress Pdf Offline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/every-day-git-commands/" class="">Every Day Git Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/" class="">Google Spreadsheet Tricks</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Web</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://francoiducat.github.io/docs/web/embed-pdf-in-html/" class="">Embed Pdf in HTML</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Archives
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Notions de bases en réseau</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#réseau-informatique">Réseau (informatique)</a></li>
+    <li><a href="#cables-réseau-ou-cable-ethernet">Cables réseau ou cable ethernet:</a></li>
+    <li><a href="#carte-réseau">Carte réseau</a></li>
+    <li><a href="#concentrateur-hub">Concentrateur (Hub)</a></li>
+    <li><a href="#routeur">Routeur</a></li>
+    <li><a href="#passerelle">Passerelle</a></li>
+    <li><a href="#lan-local-area-networkou-wlan-wireless-local-area-network">LAN (Local Area Network) ou WLAN (Wireless Local Area Network)</a></li>
+    <li><a href="#wan-wide-area-network">WAN (Wide Area Network)</a></li>
+    <li><a href="#topologie-de-réseau">Topologie de réseau</a>
+      <ul>
+        <li><a href="#bus">Bus</a></li>
+        <li><a href="#etoile">Etoile</a></li>
+        <li><a href="#mesh">Mesh</a></li>
+        <li><a href="#anneau-hybride">Anneau, hybride</a></li>
+      </ul>
+    </li>
+    <li><a href="#adresse-ip">Adresse IP</a>
+      <ul>
+        <li><a href="#ipv4">IPv4</a></li>
+        <li><a href="#ipv6">IPv6</a></li>
+      </ul>
+    </li>
+    <li><a href="#masque-de-sous-réseau">Masque de sous-réseau</a></li>
+    <li><a href="#adresse-mac">Adresse MAC</a></li>
+    <li><a href="#sous-réseau">Sous réseau</a></li>
+    <li><a href="#masque-réseau">Masque réseau</a></li>
+    <li><a href="#protocole">Protocole</a></li>
+    <li><a href="#architecture-réseau">Architecture réseau</a></li>
+    <li><a href="#classes">Classes</a>
+      <ul>
+        <li><a href="#classe-a">Classe A</a></li>
+        <li><a href="#classe-b">Classe B</a></li>
+        <li><a href="#classe-c">Classe C</a></li>
+        <li><a href="#classe-privée">Classe privée</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/notions-reseau/">Notions de bases en réseau</a>
+  </h1>
+  
+  <h5>Jan 11, 2011</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/administration-systeme/">Administration Systeme</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/tags/r%C3%A9seau/">Réseau</a>
+  </div>
+  
+
+
+
+<h1 id="notions-de-bases-en-réseau">
+  Notions de bases en réseau
+  <a class="anchor" href="#notions-de-bases-en-r%c3%a9seau">#</a>
+</h1>
+<h2 id="réseau-informatique">
+  Réseau (informatique)
+  <a class="anchor" href="#r%c3%a9seau-informatique">#</a>
+</h2>
+<p>Ensemble d&rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:</p>
+<ol>
+<li>Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.)</li>
+<li>Echanger des données: documents, tchats etc.</li>
+</ol>
+<h2 id="cables-réseau-ou-cable-ethernet">
+  Cables réseau ou cable ethernet:
+  <a class="anchor" href="#cables-r%c3%a9seau-ou-cable-ethernet">#</a>
+</h2>
+<ul>
+<li>UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde</li>
+<li>UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde</li>
+<li>cables ethernet droits: relie un ordinateur à un switch</li>
+<li>cables ethernet croisés: relie 2 ordinateurs entre eux</li>
+</ul>
+<h2 id="carte-réseau">
+  Carte réseau
+  <a class="anchor" href="#carte-r%c3%a9seau">#</a>
+</h2>
+<p>Matériel qui permet d&rsquo;accéder au réseau. C&rsquo;est par là que les données transites. La carte réseau fourni une adresse MAC à l&rsquo;ordinateur en question afin de l&rsquo;identifier sur le réseau (adresse physique). Une carte réseau se fixe au port PCI de l&rsquo;ordinateur.</p>
+<h2 id="concentrateur-hub">
+  Concentrateur (Hub)
+  <a class="anchor" href="#concentrateur-hub">#</a>
+</h2>
+<p>Matériel qui permet l&rsquo;échange des données. Il reçoit des données par un port, et envoie ce qu&rsquo;il reçoit aux autres ports. Il a une interface de <em>réception</em> (un port) et une interface de <em>diffusion</em> (plusieurs autres ports par où les autres ordinateurs sont connectés).</p>
+<p>Commutateur (switch)</p>
+<p>Matériel qui permet l&rsquo;échange des données. Il transmet des données aux autres ordinateurs <em>en se basant sur leurs adresses MAC</em></p>
+<h2 id="routeur">
+  Routeur
+  <a class="anchor" href="#routeur">#</a>
+</h2>
+<p>Matériel qui permet l&rsquo;échange des données. Il est la frontière entre le réseau local (câbles Ethernet ou WIFI) et le réseau Interent (câble branché sur la prise téléphonique).</p>
+<h2 id="passerelle">
+  Passerelle
+  <a class="anchor" href="#passerelle">#</a>
+</h2>
+<p>Système qui permet de relier deux réseaux différents. Ça peut-être sous une machine sous un logiciel. Exemple 2 réseaux qui n&rsquo;utiliseraient pas le même protocole.</p>
+<h2 id="lan-local-area-networkou-wlan-wireless-local-area-network">
+  LAN (Local Area Network) ou WLAN (Wireless Local Area Network)
+  <a class="anchor" href="#lan-local-area-networkou-wlan-wireless-local-area-network">#</a>
+</h2>
+<p>Réseau limité à un espace géographique comme un bâtiment par exemple, avec ou sans fil. C&rsquo;est un réseau local.</p>
+<h2 id="wan-wide-area-network">
+  WAN (Wide Area Network)
+  <a class="anchor" href="#wan-wide-area-network">#</a>
+</h2>
+<p>Réseau étendu. Un WAN et un ensemble de LAN relié entre eux.</p>
+<h2 id="topologie-de-réseau">
+  Topologie de réseau
+  <a class="anchor" href="#topologie-de-r%c3%a9seau">#</a>
+</h2>
+<h3 id="bus">
+  Bus
+  <a class="anchor" href="#bus">#</a>
+</h3>
+<h3 id="etoile">
+  Etoile
+  <a class="anchor" href="#etoile">#</a>
+</h3>
+<p>Routeur, commutateur ou concentrateur se situe au centre du réseau et tous les ordinateurs y sont connectés. S&rsquo;ils veulent communiquer entre eux ils doivent forcément passer par le routeur.</p>
+<h3 id="mesh">
+  Mesh
+  <a class="anchor" href="#mesh">#</a>
+</h3>
+<p>ou maillé, tous les ordinateurs sont reliés entre eux par des cables.</p>
+<h3 id="anneau-hybride">
+  Anneau, hybride
+  <a class="anchor" href="#anneau-hybride">#</a>
+</h3>
+<h2 id="adresse-ip">
+  Adresse IP
+  <a class="anchor" href="#adresse-ip">#</a>
+</h2>
+<p>Adresse pour communiquer avec l&rsquo;ordinateur. Elle est relative au réseau. C&rsquo;est le seul moyen d&rsquo;identification des machines sur Internet.</p>
+<p>On distingue:</p>
+<h3 id="ipv4">
+  IPv4
+  <a class="anchor" href="#ipv4">#</a>
+</h3>
+<p>4 nombres compris entre 1 et 255, séparés par des points.</p>
+<p>Une adresse IPv4 est constituée de 32 bits séparés en 4 portions par des points. (1byte = 1octet = 8bits). Une adresse IP est donc constituée de 4 octets, ou 4 bytes soit 32 bits. Exemple : 192.168.0.10</p>
+<h3 id="ipv6">
+  IPv6
+  <a class="anchor" href="#ipv6">#</a>
+</h3>
+<p>8 groupes de 2 octets représentés en hexadécimal. Exemple 1fff:0011:0a88:85a3:6500:0320:ac1f:8001</p>
+<h2 id="masque-de-sous-réseau">
+  Masque de sous-réseau
+  <a class="anchor" href="#masque-de-sous-r%c3%a9seau">#</a>
+</h2>
+<p>Une partie supplémentaire de l&rsquo;adresse où trouver une machine connectée au réseau.</p>
+<h2 id="adresse-mac">
+  Adresse MAC
+  <a class="anchor" href="#adresse-mac">#</a>
+</h2>
+<p>Adresse relative à la carte réseau. Identifiant unique attribué à la carte réseau. Exemple: 01:22:64:31:78:AC</p>
+<h2 id="sous-réseau">
+  Sous réseau
+  <a class="anchor" href="#sous-r%c3%a9seau">#</a>
+</h2>
+<p>C&rsquo;est un réseau dans un réseau. Plusieurs sous-réseaux peuvent faire partie du même réseau.</p>
+<h2 id="masque-réseau">
+  Masque réseau
+  <a class="anchor" href="#masque-r%c3%a9seau">#</a>
+</h2>
+<p>Nom du sous-réseau. Exemple : 255.255.255.0</p>
+<h2 id="protocole">
+  Protocole
+  <a class="anchor" href="#protocole">#</a>
+</h2>
+<p>Langue du sous-réseau pour communiquer avec un autre sous-réseau (dans le réseau).</p>
+<p>Pour que 2 machines communiquent entre elles dans un réseau elles doivent:</p>
+<ul>
+<li>Utiliser le même protocole</li>
+<li>Appartenir au même sous-réseau</li>
+<li>Connaitre leur adresse IP</li>
+</ul>
+<p>Pour que 2 machines d&rsquo;un sous-réseau différent communiquent entre elles il faut une passerelle.</p>
+<h2 id="architecture-réseau">
+  Architecture réseau
+  <a class="anchor" href="#architecture-r%c3%a9seau">#</a>
+</h2>
+<ul>
+<li>client/serveur</li>
+<li>pair à pair (peer to peer): partage de fichiers</li>
+</ul>
+<h2 id="classes">
+  Classes
+  <a class="anchor" href="#classes">#</a>
+</h2>
+<p>Ensemble d&rsquo;adresses IP. Chaque adresse IP appartient à une classe principale (plage). Chaque classe a un masque de sous-réseau <strong>par défaut</strong>. Dès que l&rsquo;on doone une adresse IP  à la carte réseau, le système d&rsquo;exploitation lui assigne directement un masque de sous-réseau par défaut selon la classe à laquelle appartient l&rsquo;adresse IP. Il existe 5 classes d&rsquo;adresses IP: A, B, C, D, E.</p>
+<h3 id="classe-a">
+  Classe A
+  <a class="anchor" href="#classe-a">#</a>
+</h3>
+<p>Adresses IP se situent entre 1.0.0.0 et 127.255.255.255.</p>
+<p>Masque de sous-réseau par défaut : 255.0.0.0</p>
+<p>Adressess IP entre 127.0.0.0 et 127.255.255.255 sert pour les tests spécifiques.</p>
+<p>Exemple : 110.168.0.10</p>
+<p>Ici 110 est le network ID. On est dans le réseau 110</p>
+<p>168.0.10 est l&rsquo;host ID soit l&rsquo;adresse de la carte réseau</p>
+<p>Grâce à la répartition des octets entre network ID et host ID, <strong>16 777 214 adresses IP</strong> <strong>par réseau</strong> sont disponibles et 126 réseaux.</p>
+<h3 id="classe-b">
+  Classe B
+  <a class="anchor" href="#classe-b">#</a>
+</h3>
+<p>Adresses IP entre 128.0.0.0 et 191.255.255.255.</p>
+<p>Masque de sous-réseau par défaut : 255.255.0.0.</p>
+<p>Exemple: 170.40.0.6</p>
+<p>Ici 170.40 est le network ID. On est dans le réseau 170.40</p>
+<p>0.6 est l&rsquo;host ID. L&rsquo;adresse 0.6 appartient au réseau 170.40</p>
+<p><strong>65 534 ordinateurs par réseau.</strong></p>
+<h3 id="classe-c">
+  Classe C
+  <a class="anchor" href="#classe-c">#</a>
+</h3>
+<p>Adresse IP entre 192.0.0.0 et 223.255.255.255.</p>
+<p>Le masque de sous-réseau par défaut est 255.255.255.0.</p>
+<p><strong>254 adresses IP par réseau</strong>, et 2 097 152 réseaux.</p>
+<p>Envoi de données dans le réseau:</p>
+<p><strong>L&rsquo;unicast :</strong> dans ce cas, on envoie des données à un seul ordinateur ;</p>
+<p><strong>Le multicast :</strong> l&rsquo;envoi des données se fait vers un groupe d&rsquo;ordinateurs ;</p>
+<p><strong>Le broadcast :</strong> on envoie des données à tous les ordinateurs du réseau.</p>
+<p>Pour la classe C: l&rsquo;adresse 255 est une adresse de type broadcast (d&rsquo;où 254 adresses IP possibles par réseau dans la classe C et non pas 255 puisque cette adresse ne peut être prise par un hôte)</p>
+<p>Pour la classe B: l&rsquo;adresse 255.255 est l&rsquo;adresse de broadcast</p>
+<p>Pour la classe A: l&rsquo;adresse 255.255.255 est l&rsquo;adresse de broadcast</p>
+<h3 id="classe-privée">
+  Classe privée
+  <a class="anchor" href="#classe-priv%c3%a9e">#</a>
+</h3>
+<p>Portée d&rsquo;adresses IP dans une classe (A,B,C) réservée pour un usage particulier ou par convention.</p>
+<p>Exemple:</p>
+<ul>
+<li>la portée 169.254.0.0 - 169.254.255.255 appartient à la classe privée réservé par Microsoft dans la classe B.</li>
+<li>la portée 192.168.0.0 - 192.168.255.255 appartient à une classe privée dans la classe C. Il faudra le service NAT pour accéder à Internet.</li>
+<li>la portée 172.16.0.0 à 172.31.255.255 appartient à une classe privé de la classe B.</li>
+<li>la portée 10.0.0.0 à 10.255.255.255 appartient à une classe privé de la classe A.</li>
+</ul>
+<p>NB: En général les FAI proposent des adresses appartenant à des classes privées.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#réseau-informatique">Réseau (informatique)</a></li>
+    <li><a href="#cables-réseau-ou-cable-ethernet">Cables réseau ou cable ethernet:</a></li>
+    <li><a href="#carte-réseau">Carte réseau</a></li>
+    <li><a href="#concentrateur-hub">Concentrateur (Hub)</a></li>
+    <li><a href="#routeur">Routeur</a></li>
+    <li><a href="#passerelle">Passerelle</a></li>
+    <li><a href="#lan-local-area-networkou-wlan-wireless-local-area-network">LAN (Local Area Network) ou WLAN (Wireless Local Area Network)</a></li>
+    <li><a href="#wan-wide-area-network">WAN (Wide Area Network)</a></li>
+    <li><a href="#topologie-de-réseau">Topologie de réseau</a>
+      <ul>
+        <li><a href="#bus">Bus</a></li>
+        <li><a href="#etoile">Etoile</a></li>
+        <li><a href="#mesh">Mesh</a></li>
+        <li><a href="#anneau-hybride">Anneau, hybride</a></li>
+      </ul>
+    </li>
+    <li><a href="#adresse-ip">Adresse IP</a>
+      <ul>
+        <li><a href="#ipv4">IPv4</a></li>
+        <li><a href="#ipv6">IPv6</a></li>
+      </ul>
+    </li>
+    <li><a href="#masque-de-sous-réseau">Masque de sous-réseau</a></li>
+    <li><a href="#adresse-mac">Adresse MAC</a></li>
+    <li><a href="#sous-réseau">Sous réseau</a></li>
+    <li><a href="#masque-réseau">Masque réseau</a></li>
+    <li><a href="#protocole">Protocole</a></li>
+    <li><a href="#architecture-réseau">Architecture réseau</a></li>
+    <li><a href="#classes">Classes</a>
+      <ul>
+        <li><a href="#classe-a">Classe A</a></li>
+        <li><a href="#classe-b">Classe B</a></li>
+        <li><a href="#classe-c">Classe C</a></li>
+        <li><a href="#classe-privée">Classe privée</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

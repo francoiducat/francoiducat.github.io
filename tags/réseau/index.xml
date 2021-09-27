@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Réseau on FDUCAT Notebook</title>
+    <link>https://francoiducat.github.io/tags/r%C3%A9seau/</link>
+    <description>Recent content in Réseau on FDUCAT Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Jan 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://francoiducat.github.io/tags/r%C3%A9seau/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notions de bases en réseau</title>
+      <link>https://francoiducat.github.io/posts/notions-reseau/</link>
+      <pubDate>Tue, 11 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/posts/notions-reseau/</guid>
+      <description>Notions de bases en réseau #  Réseau (informatique) #  Ensemble d&amp;rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:
+ Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc.  Cables réseau ou cable ethernet: #   UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux  Carte réseau #  Matériel qui permet d&amp;rsquo;accéder au réseau.</description>
+    </item>
+    
+  </channel>
+</rss>

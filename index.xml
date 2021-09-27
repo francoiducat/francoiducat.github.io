@@ -7,6 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://francoiducat.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Charger ses propres fichiers .css et .js dans Wordpress</title>
+      <link>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</link>
+      <pubDate>Thu, 02 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</guid>
+      <description>Charger ses propres fichiers .css et .js dans Wordpress #  Objectif #  Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.
+Solution #  Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &amp;lt;head&amp;gt; de notre page HTML.
+Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes
+ _wp_enqueue_script_ _wp_enqueue_style_  du fichier function.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/java/springboot-graphql-client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

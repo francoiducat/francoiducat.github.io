@@ -3,21 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Compress PDF offline with ghostscript #  I found this great tool to compress pdf (python script) from the command line.
-Requirements #  Make sure you have ghoscript installed. If not just run brew install ghoscript
-How to #  Copy source files from https://github.com/hkdb/cpdf to your bin directory (that’s defined in your env) eg. /usr/local/bin if you are on OSX.
-Then from your favorite terminal, just use one of the commands described in the readme of the project.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Compress PDF offline with ghostscript #  I found this great tool to compress pdf (python script) from the command line.
-Requirements #  Make sure you have ghoscript installed. If not just run brew install ghoscript
-How to #  Copy source files from https://github.com/hkdb/cpdf to your bin directory (that’s defined in your env) eg. /usr/local/bin if you are on OSX.
-Then from your favorite terminal, just use one of the commands described in the readme of the project." />
+<meta name="description" content="Charger ses propres fichiers .css et .js dans Wordpress">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Charger ses propres fichiers .css et .js dans Wordpress" />
+<meta property="og:description" content="Charger ses propres fichiers .css et .js dans Wordpress" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2010-12-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2010-12-02T00:00:00+00:00" />
 
-<meta property="article:modified_time" content="2021-09-25T13:37:48+02:00" />
-
-<title>Compress Pdf Offline | FDUCAT Notebook</title>
+<title>Charger ses propres fichiers .css et .js dans Wordpress | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
@@ -129,7 +123,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" class=" active">Compress Pdf Offline</a>
+    <a href="https://francoiducat.github.io/docs/productivity/compress-pdf-offline/" class="">Compress Pdf Offline</a>
   
 
         </li>
@@ -245,7 +239,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Compress Pdf Offline</strong>
+  <strong>Charger ses propres fichiers .css et .js dans Wordpress</strong>
 
   <label for="toc-control">
     
@@ -261,12 +255,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#compress-pdf-offline-with-ghostscript">Compress PDF offline with ghostscript</a>
-      <ul>
-        <li><a href="#requirements">Requirements</a></li>
-        <li><a href="#how-to">How to</a></li>
-      </ul>
-    </li>
+    <li><a href="#objectif">Objectif</a></li>
+    <li><a href="#solution">Solution</a></li>
   </ul>
 </nav>
 
@@ -279,27 +269,70 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h2 id="compress-pdf-offline-with-ghostscript">
-  Compress PDF offline with ghostscript
-  <a class="anchor" href="#compress-pdf-offline-with-ghostscript">#</a>
+<article class="markdown">
+  <h1>
+    <a href="/posts/charger-ses-propres-fichiers-css-dans-wordpress/">Charger ses propres fichiers .css et .js dans Wordpress</a>
+  </h1>
+  
+  <h5>Dec 2, 2010</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/wordpress/">WordPress</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/tags/css/">css</a>, 
+      <a href="/tags/jquery/">jquery</a>
+  </div>
+  
+
+
+
+<h1 id="charger-ses-propres-fichiers-css-et-js-dans-wordpress">
+  Charger ses propres fichiers .css et .js dans Wordpress
+  <a class="anchor" href="#charger-ses-propres-fichiers-css-et-js-dans-wordpress">#</a>
+</h1>
+<h2 id="objectif">
+  Objectif
+  <a class="anchor" href="#objectif">#</a>
 </h2>
-<p><img src="https://www.ghostscript.com/images/ghostscript_logo.png" alt="Ghoscript_logo" /></p>
-<p>I found this great tool to compress pdf (python script) from the command line.</p>
-<h3 id="requirements">
-  Requirements
-  <a class="anchor" href="#requirements">#</a>
-</h3>
-<p>Make sure you have <a href="https://www.ghostscript.com">ghoscript</a> installed. If not just run <code>brew install ghoscript</code></p>
-<h3 id="how-to">
-  How to
-  <a class="anchor" href="#how-to">#</a>
-</h3>
-<p>Copy source files from <code>https://github.com/hkdb/cpdf</code> to your bin directory (that’s defined in your env) eg. <code>/usr/local/bin</code> if you are on OSX.</p>
-<p>Then from your favorite terminal, just use one of the commands described in the <code>readme</code> of the project.</p>
-<p>Basic command:</p>
-<pre tabindex="0"><code>cpdf ebook in.pdf out.pdf
-</code></pre><p>That’s all.</p>
-<p>Thank you <a href="https://github.com/hkdb">hkdb</a>!</p>
+<p>Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.</p>
+<h2 id="solution">
+  Solution
+  <a class="anchor" href="#solution">#</a>
+</h2>
+<p>Sur un site &ldquo;non wordpress&rdquo; on pourrait inclure nos scripts entre les balises <code>&lt;head&gt;</code> de notre page HTML.</p>
+<p>Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&rsquo;utiliser les méthodes</p>
+<ul>
+<li><code>_wp_enqueue_script_</code></li>
+<li><code>_wp_enqueue_style_</code></li>
+</ul>
+<p>du fichier <code>function.php</code>.</p>
+<p>Voici un exemple de code à inclure dans le fichier function.php :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">//Créer une fonction pour appeler les fichiers javascript et css
+</span><span style="color:#75715e"></span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">load_my_files</span>() {   
+  <span style="color:#75715e">// Charger les fichiers SAUF sur l&#39;administration du site
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">is_admin</span>()) {
+    <span style="color:#75715e">//Load js files
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wp_enqueue_script</span>(<span style="color:#e6db74">&#39;script1&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/js/script1.js&#39;</span>);
+    <span style="color:#a6e22e">wp_enqueue_script</span>(<span style="color:#e6db74">&#39;script2&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/js/script2.js&#39;</span>);
+    <span style="color:#75715e">//Load css files
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wp_enqueue_style</span>(<span style="color:#e6db74">&#39;style2&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/css/style2.css&#39;</span>);
+    <span style="color:#a6e22e">wp_enqueue_style</span>(<span style="color:#e6db74">&#39;style1&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/css/style1.css&#39;</span>);
+      }
+    }
+    <span style="color:#75715e">// Charger notre fonction à l&#39;initialisation
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">add_action</span>(<span style="color:#e6db74">&#39;init&#39;</span>, <span style="color:#e6db74">&#39;load_my_files&#39;</span>);
+    <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p>Puis déposer sur votre serveur les fichiers .js et .css à dans les dossiers créés à cet effet comme dans l&rsquo;example ci-dessus</p>
 </article>
  
       
@@ -308,12 +341,6 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex flex-wrap justify-between">
 
-
-  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/35939492929803c3526f0495af6988693a803ee5" title='Last modified by francoiducat | Sep 25, 2021' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Sep 25, 2021</span>
-    </a>
-  </div>
 
 
 
@@ -347,12 +374,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#compress-pdf-offline-with-ghostscript">Compress PDF offline with ghostscript</a>
-      <ul>
-        <li><a href="#requirements">Requirements</a></li>
-        <li><a href="#how-to">How to</a></li>
-      </ul>
-    </li>
+    <li><a href="#objectif">Objectif</a></li>
+    <li><a href="#solution">Solution</a></li>
   </ul>
 </nav>
 

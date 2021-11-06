@@ -20,6 +20,16 @@ Then from your favorite terminal, just use one of the commands described in the 
     
     <item>
       <title></title>
+      <link>https://francoiducat.github.io/docs/productivity/day-to-day-bash-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/docs/productivity/day-to-day-bash-commands/</guid>
+      <description>Day to day bash commands for developers #  npm config set registry https://nexus.dktapp.cloud/repository/npm_proxies/ npm config get registry
+Change your .npmrc file with this new registry URL: registry=https://nexus.dktapp.cloud/repository/npm_proxies/</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://francoiducat.github.io/docs/productivity/every-day-git-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -38,6 +48,17 @@ git remote add upstream git@github.com:username/git-repo.git Remove a remote fil
       <guid>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</guid>
       <description>Google spreadsheet tricks #  Remove characters from a string in a cell with Google spreadsheet #  Goal #  Remove the first 2 characters from a string in cell D1 :
  =RIGHT(D1,LEN(D1)-2) Explanations #   LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</guid>
+      <description>Mac OS Screen record with audio for free #  This video explains very clearly how to record your screen with audio on mac os for free.
+Sources:
+ https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device  </description>
     </item>
     
   </channel>

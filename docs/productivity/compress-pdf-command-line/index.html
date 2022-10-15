@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Afficher un pdf dans une page HTML # Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.
-Vous pouvez par exemple utiliser les services de scribd.com ou tout simplement insérer le code HTML suivant dans votre page :
-Avec la balise embed (/!\ non compatible sur naviguateurs mobiles)
-&lt;embed src=&#34;https://yoursite.com/yourdocument.pdf&#34; width=&#34;100%&#34; height=&#34;400p&#34;&gt; ou avec la balise iframe qui est compatible sur naviguateur mobile.
-&lt;iframe src=&#34;https://docs.google.com/viewer?url=https://yoursite.com/pdf/yourdocument.pdf&amp;embedded=true&#34; style=&#34;width:100%; height:500px;&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt; Voici le résultat :">
+<meta name="description" content="Compress PDF offline with ghostscript # I found this great tool to compress pdf (python script) from the command line.
+Requirements # Python # Check your python version
+➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version
+➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) How to # Add this command in your .bash_profile or .zshrc file
+Setup # # Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&#34;screen&#34;} -dCompatibilityLevel=1.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Afficher un pdf dans une page HTML # Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.
-Vous pouvez par exemple utiliser les services de scribd.com ou tout simplement insérer le code HTML suivant dans votre page :
-Avec la balise embed (/!\ non compatible sur naviguateurs mobiles)
-&lt;embed src=&#34;https://yoursite.com/yourdocument.pdf&#34; width=&#34;100%&#34; height=&#34;400p&#34;&gt; ou avec la balise iframe qui est compatible sur naviguateur mobile.
-&lt;iframe src=&#34;https://docs.google.com/viewer?url=https://yoursite.com/pdf/yourdocument.pdf&amp;embedded=true&#34; style=&#34;width:100%; height:500px;&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt; Voici le résultat :" />
+<meta property="og:description" content="Compress PDF offline with ghostscript # I found this great tool to compress pdf (python script) from the command line.
+Requirements # Python # Check your python version
+➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version
+➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) How to # Add this command in your .bash_profile or .zshrc file
+Setup # # Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&#34;screen&#34;} -dCompatibilityLevel=1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://francoiducat.github.io/docs/web/embed-pdf-in-html/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://francoiducat.github.io/docs/productivity/compress-pdf-command-line/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-09-27T09:13:09+02:00" />
 
-<title>Embed Pdf in HTML | FDUCAT Notebook</title>
+
+<title>Compress Pdf Command Line | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e610a473b48f5c1534482d83a4e87390c16d300d987747c145b901e5d0bfe318.css" integrity="sha256-5hCkc7SPXBU0SC2DpOhzkMFtMA2Yd0fBRbkB5dC/4xg=" crossorigin="anonymous">
@@ -151,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/productivity/compress-pdf-command-line/" class="">Compress Pdf Command Line</a>
+    <a href="/docs/productivity/compress-pdf-command-line/" class="active">Compress Pdf Command Line</a>
   
 
         </li>
@@ -247,7 +247,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/web/embed-pdf-in-html/" class="active">Embed Pdf in HTML</a>
+    <a href="/docs/web/embed-pdf-in-html/" class="">Embed Pdf in HTML</a>
   
 
         </li>
@@ -306,7 +306,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Embed Pdf in HTML</strong>
+  <strong>Compress Pdf Command Line</strong>
 
   <label for="toc-control">
     
@@ -320,7 +320,16 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#compress-pdf-offline-with-ghostscript">Compress PDF offline with ghostscript</a>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#how-to">How to</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -331,20 +340,49 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="afficher-un-pdf-dans-une-page-html">
-  Afficher un pdf dans une page HTML
-  <a class="anchor" href="#afficher-un-pdf-dans-une-page-html">#</a>
-</h1>
-<p>Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.</p>
-<p>Vous pouvez par exemple utiliser les services de <a href="http://www.scribd.com" title="scribd.com">scribd.com</a> ou tout simplement insérer le code HTML suivant dans votre page :</p>
-<p>Avec la balise <code>embed</code> (/!\ non compatible sur naviguateurs mobiles)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">embed</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://yoursite.com/yourdocument.pdf&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;400p&#34;</span>&gt;
-</span></span></code></pre></div><p>ou avec la balise <code>iframe</code> qui est compatible sur naviguateur mobile.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://docs.google.com/viewer?url=https://yoursite.com/pdf/yourdocument.pdf&amp;embedded=true&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:100%; height:500px;&#34;</span> <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;
-</span></span></code></pre></div><p>Voici le résultat :</p>
-<iframe src="https://docs.google.com/viewer?url=https://francoiducat.github.io/pdf/hugo_framework.pdf&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
-
-</article>
+  <article class="markdown"><h2 id="compress-pdf-offline-with-ghostscript">
+  Compress PDF offline with ghostscript
+  <a class="anchor" href="#compress-pdf-offline-with-ghostscript">#</a>
+</h2>
+<p><img src="https://www.ghostscript.com/images/logos/ghostscript-plus-text.png" alt="Ghoscript_logo" /></p>
+<p>I found this great tool to compress pdf (python script) from the command line.</p>
+<h3 id="requirements">
+  Requirements
+  <a class="anchor" href="#requirements">#</a>
+</h3>
+<h4 id="python">
+  Python
+  <a class="anchor" href="#python">#</a>
+</h4>
+<p>Check your python version</p>
+<pre tabindex="0"><code>➜  ~ python --version
+Python 3.8.9
+</code></pre><h4 id="ghoscript">
+  Ghoscript
+  <a class="anchor" href="#ghoscript">#</a>
+</h4>
+<p>Check your ghoscript version</p>
+<pre tabindex="0"><code>➜  ~ gs
+GPL Ghostscript 10.0.0 (2022-09-21)
+</code></pre><h3 id="how-to">
+  How to
+  <a class="anchor" href="#how-to">#</a>
+</h3>
+<p>Add this command in your <code>.bash_profile</code> or <code>.zshrc</code> file</p>
+<h4 id="setup">
+  Setup
+  <a class="anchor" href="#setup">#</a>
+</h4>
+<pre tabindex="0"><code># Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress]
+spdf() {
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&#34;screen&#34;} -dCompatibilityLevel=1.4 -sOutputFile=&#34;$2&#34; &#34;$1&#34;
+}
+</code></pre><h4 id="usage">
+  Usage
+  <a class="anchor" href="#usage">#</a>
+</h4>
+<pre tabindex="0"><code>spdf BigFile.pdf SmallFile.pdf ebook
+</code></pre></article>
  
       
 
@@ -352,12 +390,6 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex flex-wrap justify-between">
 
-
-  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/56032d7a301c2d5cc3ed3574685dd3ce792a6dd5" title='Last modified by francoiducat | Sep 27, 2021' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Sep 27, 2021</span>
-    </a>
-  </div>
 
 
 
@@ -389,7 +421,16 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#compress-pdf-offline-with-ghostscript">Compress PDF offline with ghostscript</a>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#how-to">How to</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

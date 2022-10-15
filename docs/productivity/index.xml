@@ -8,14 +8,15 @@
     <language>en-us</language><atom:link href="https://francoiducat.github.io/docs/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://francoiducat.github.io/docs/productivity/compress-pdf-offline/</link>
+      <link>https://francoiducat.github.io/docs/productivity/compress-pdf-command-line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://francoiducat.github.io/docs/productivity/compress-pdf-offline/</guid>
-      <description>Compress PDF offline with ghostscript #  I found this great tool to compress pdf (python script) from the command line.
-Requirements #  Make sure you have ghoscript installed. If not just run brew install ghoscript
-How to #  Copy source files from https://github.com/hkdb/cpdf to your bin directory (that’s defined in your env) eg. /usr/local/bin if you are on OSX.
-Then from your favorite terminal, just use one of the commands described in the readme of the project.</description>
+      <guid>https://francoiducat.github.io/docs/productivity/compress-pdf-command-line/</guid>
+      <description>Compress PDF offline with ghostscript # I found this great tool to compress pdf (python script) from the command line.
+Requirements # Python # Check your python version
+➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version
+➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) How to # Add this command in your .bash_profile or .zshrc file
+Setup # # Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&amp;#34;screen&amp;#34;} -dCompatibilityLevel=1.</description>
     </item>
     
     <item>
@@ -24,9 +25,7 @@ Then from your favorite terminal, just use one of the commands described in the 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://francoiducat.github.io/docs/productivity/day-to-day-bash-commands/</guid>
-      <description>Day to day bash commands for developers #  Edit npm registry #  Set #  npm config set registry https://your-custom-npm-registry.com/
-This command updates your .npmrc file with your new registry URL: registry=https://your-custom-npm-registry.com/
-Get #  npm config get registry</description>
+      <description>Day to day bash commands for developers # Bash commands # cd nom du dossier entrer dans un dossier cd .. : revenir au dossier précédant cat nomdufichier : affiche le contenu d&amp;rsquo;un fichier pwd : dis moi où je suis ! mkdir nomdudossier : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&amp;rsquo;utilisateur (la &amp;ldquo;home directory&amp;rdquo; de l&amp;rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.</description>
     </item>
     
     <item>
@@ -35,10 +34,10 @@ Get #  npm config get registry</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://francoiducat.github.io/docs/productivity/every-day-git-commands/</guid>
-      <description>Every day Git commands for developers #  Here are some day to day useful git commands
-Show all remotes #  This show origin and upstream remotes
-git remote -v git remote show origin #shows branches, tags etc. git remote show upstream #shows branches, tags etc. Add upstream remote #  (vs origin remote)
-git remote add upstream git@github.com:username/git-repo.git Remove a remote file #  Remove a remote file or directory from a Git repository without deleting it from the local filesystem</description>
+      <description>Every day Git commands for developers # Here are some day to day useful git commands
+Show all remotes # This show origin and upstream remotes
+git remote -v git remote show origin #shows branches, tags etc. git remote show upstream #shows branches, tags etc. Add upstream remote # (vs origin remote)
+git remote add upstream git@github.com:username/git-repo.git Remove a remote file # Remove a remote file or directory from a Git repository without deleting it from the local filesystem</description>
     </item>
     
     <item>
@@ -47,8 +46,8 @@ git remote add upstream git@github.com:username/git-repo.git Remove a remote fil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</guid>
-      <description>Google spreadsheet tricks #  Remove characters from a string in a cell with Google spreadsheet #  Goal #  Remove the first 2 characters from a string in cell D1 :
- =RIGHT(D1,LEN(D1)-2) Explanations #   LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return.</description>
+      <description>Google spreadsheet tricks # Remove characters from a string in a cell with Google spreadsheet # Goal # Remove the first 2 characters from a string in cell D1 :
+=RIGHT(D1,LEN(D1)-2) Explanations # LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return. Alternatively, to remove the last 2 characters, use :</description>
     </item>
     
     <item>
@@ -57,8 +56,18 @@ git remote add upstream git@github.com:username/git-repo.git Remove a remote fil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</guid>
-      <description>Mac OS Screen record with audio for free #  This video explains very clearly how to record your screen with audio on mac os for free.
-Sources #   https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device  </description>
+      <description> Mac OS Screen record with audio for free # This video explains very clearly how to record your screen with audio on mac os for free.
+Without audio just use quicktime:
+Sources # https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://francoiducat.github.io/docs/productivity/resize-images-command-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/docs/productivity/resize-images-command-line/</guid>
+      <description>Batch resize image using Mac OS command line # Usage # ~ sips -Z 720 *.jpg Adjsut max image ratio: 640,720,1024,1280 etc.</description>
     </item>
     
   </channel>

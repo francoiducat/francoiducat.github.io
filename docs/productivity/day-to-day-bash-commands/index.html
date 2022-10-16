@@ -10,14 +10,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://francoiducat.github.io/docs/productivity/day-to-day-bash-commands/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-11-06T10:22:43+01:00" />
+<meta property="article:modified_time" content="2022-10-15T17:00:25+02:00" />
 
 <title>Day to Day Bash Commands | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e610a473b48f5c1534482d83a4e87390c16d300d987747c145b901e5d0bfe318.css" integrity="sha256-5hCkc7SPXBU0SC2DpOhzkMFtMA2Yd0fBRbkB5dC/4xg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.833f5ddbe0771f887d5222764d4095aba406ff5c933ed2a787cc22f5697251a3.js" integrity="sha256-gz9d2&#43;B3H4h9UiJ2TUCVq6QG/1yTPtKnh8wi9WlyUaM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.fd9e936123feb6263a97db601157c2f2e58dbcf85c95dc9de1bc29cba4e980bf.js" integrity="sha256-/Z6TYSP&#43;tiY6l9tgEVfC8uWNvPhcldyd4bwpy6TpgL8=" crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -381,32 +381,32 @@ https://github.com/alex-shpak/hugo-book
 <li><code>ls -a</code> : Lister tout le contenu d&rsquo;un dossier (dont les fichiers cachés)</li>
 <li><code>ls -h</code> : Lister les repertoires en affichant le volume des fichiers de manière &ldquo;lisible&rdquo;</li>
 <li><code>ls -t | head -n 1</code> : Liste le dernier le fichier édité. Ici, la commande &ldquo;head&rdquo; permet d&rsquo;afficher le nombre de ligne voulu par rapport au résultat de la commande ls (ici une seule ligne)</li>
-<li><code>ls -d \*/</code> : Lister UNIQUEMENT les repertoires.</li>
+<li><code>ls -d */</code> : Lister UNIQUEMENT les repertoires.</li>
 <li><code>~/</code> : équivaut à /home/dossierUser</li>
 <li><code>ls -l &gt; ls-l.txt</code> : Liste le contenu du répertoire dans le fichier ls-l.txt</li>
 <li><code>ls -l &gt; ls-l.txt 2&gt;&amp;1</code> : Liste uniquement les erreurs liés à la commande ls -l dans le fichier ls-l.txt</li>
-<li><code>scp /Users/john/Documents/mondossier/\* user@IP:~/mondossier</code> : Envoyer un fichier sur le serveur</li>
-<li><code>scp -r /Users/john/Documents/mondossier/\* user@IP:~/mondossier</code> : Envoyer un fichier sur le serveur dont le contenu des dossiers</li>
+<li><code>scp /Users/john/Documents/mondossier/* user@IP:~/mondossier</code> : Envoyer un fichier vers un serveur</li>
+<li><code>scp -r /Users/john/Documents/mondossier/* user@IP:~/mondossier</code> : Envoyer un fichier serveur dont le contenu des dossiers</li>
 <li><code>scp -P 5555 /Users/john/archive.tar.gz user@IP:~/mondossier</code> : Envoyer un fichier compressé en spécifiant le port. (-P)</li>
-<li><code>cp -rp /var/tmp/prestashop\_1.5.2.0  /var/www/html/</code> : Déplacer (=copier/coller) un répertoire d&rsquo;un emplacement A à un emplacement B en gardant les permissions des fichiers.</li>
+<li><code>cp -rp /var/tmp/prestashop_1.5.2.0  /var/www/html/</code> : Déplacer (=copier/coller) un répertoire d&rsquo;un emplacement A à un emplacement B en gardant les permissions des fichiers.</li>
 <li><code>tar -pczf nameoftarball.tar.gz directoryname/</code> Compresser et conserver les permissions des fichiers(-p)</li>
-<li><code>tar -xzvf nameoftarball.tar.gz</code> : Décompresser une archive. [root@127.0.0.1 demo]# </li>
-<li><code>mv folder/\* .</code>  : Déplace le contenu du dossier &ldquo;folder&rdquo; dans le dossier &ldquo;demo&rdquo;</li>
+<li><code>tar -xzvf nameoftarball.tar.gz</code> : Décompresser une archive.</li>
+<li><code>[root@127.0.0.1 demo]#mv folder/* .</code> : Déplace le contenu du dossier &ldquo;folder&rdquo; dans le dossier &ldquo;demo&rdquo;</li>
 <li><code>unzip package.zip -d /path/to/directory/to/unzip</code> : Dézipper le contenu de &ldquo;package.zip&rdquo; en choisissant le répertoire de destination.</li>
 <li><code>gunzip -c backup.sql.gzip &gt; backup.sql :</code> Extraire le fichier &ldquo;backup.sql.gzip&rdquo; pour contourner l&rsquo;erreur &ldquo;Gunzip unknwon suffix&rdquo;</li>
-<li><code>find / -name Toto.log</code> : Recherche le fichier Toto.log sur le serveur</li>
-<li><code>find . -iname Toto.log</code> : Recherche le fichier Toto.log dans le répertoire où l&rsquo;on se trouve.(case sensitive : sensible aux majuscules et minuscules)</li>
+<li><code>find / -name file.log</code> : Recherche le fichier file.log à la racine</li>
+<li><code>find . -iname file.log</code> : Recherche le fichier file.log dans le répertoire où l&rsquo;on se trouve.(case sensitive : sensible aux majuscules et minuscules)</li>
 <li><code>find . -iname php.ini</code> : Recherche le fichier php.ini dans le répertoire où l&rsquo;on se trouve.(sans prendre en compte les majuscules et minuscules)</li>
 <li><code>find . -mtime -3 | grep test</code> : Recherche les fichiers qui ont été modifié dans les 3 derniers jours et contenant &ldquo;test&rdquo; dans leur nom.</li>
 <li><code>find . -mtime +3 | grep test</code> : Recherche les fichiers qui ont été modifié il y a plus de 3 jours et contenant &ldquo;test&rdquo; dans leur nom.</li>
 <li><code>locate php.ini</code> : Recherche le fichier php.ini sur le serveur</li>
-<li><code>grep -lR &quot;chaine de caractere&quot; \*</code> : Rechercher une chaine de caractère dans tous les fichiers du dossier dans lequel on se trouve.</li>
+<li><code>grep -lR &quot;chaine de caractere&quot; *</code> : Rechercher une chaine de caractère dans tous les fichiers du dossier dans lequel on se trouve.</li>
 <li><code>find /search/in/this/folder/ -type d -name &quot;wordpress&quot;</code> : Recherche le répertoire intitulé &ldquo;wordpress&rdquo; dans le répertoire /search/in/this/folder/</li>
 <li><code>diff file1 file2 | more</code> : Afficher les différences entre 2 fichiers;</li>
-<li><code>\&gt; fileToPurge.txt</code> : Effacer le contenu du fichier sans supprimer le fichier lui-même.</li>
+<li><code>&gt; fileToPurge.txt</code> : Effacer le contenu du fichier sans supprimer le fichier lui-même.</li>
 <li><code>grep -Ri --color motarecherche /repertoire/ou/rechercher/</code> : Rechercher un mot dans un repertoire sans prendre en compte la casse et en affichant le mot à rechercher en couleur.</li>
-<li><code>sed -i 's/mot\_a\_rechercher/remplacé\_par\_celuici-meme/' fichier\_en\_question.txt</code> : Commande de rechercher/remplacer de &ldquo;mot_a_rechercher&rdquo; en &ldquo;remplacé_par_celuici-meme&rdquo; dans le fichier fichier_en_question.txt</li>
-<li><code>sed -i 's/mot\_a\_rechercher/remplacé\_par\_celuici-meme/g' fichier\_en\_question.txt</code> : Commande de rechercher/remplacer de &ldquo;mot_a_rechercher&rdquo; en &ldquo;remplacé_par_celuici-meme&rdquo; dans le fichier fichier_en_question.txt. Le <code>/g</code> permet de rechercher/remplacer plusieurs occurences de &ldquo;mot_a_rechercher&rdquo; sur une même ligne.</li>
+<li><code>sed -i 's/mot_a_rechercher/remplacé_par_celuici-meme/' fichier_en_question.txt</code> : Commande de rechercher/remplacer de &ldquo;mot_a_rechercher&rdquo; en &ldquo;remplacé_par_celuici-meme&rdquo; dans le fichier fichier_en_question.txt</li>
+<li><code>sed -i 's/mot_a_rechercher/remplacé_par_celuici-meme/g' fichier_en_question.txt</code> : Commande de rechercher/remplacer de &ldquo;mot_a_rechercher&rdquo; en &ldquo;remplacé_par_celuici-meme&rdquo; dans le fichier fichier_en_question.txt. Le <code>/g</code> permet de rechercher/remplacer plusieurs occurences de &ldquo;mot_a_rechercher&rdquo; sur une même ligne.</li>
 <li><code>grep motarechercher/etc/php.ini</code> : Rechercher motarechercher dans le fichier php.ini</li>
 <li><code>grep -v motaexclure/etc/php.ini</code> : Rechercher TOUT sauf motarechercher dans le fichier php.ini</li>
 <li><code>history</code> : affiche l&rsquo;historique des commandes</li>
@@ -451,9 +451,10 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#postgres-commands">#</a>
 </h2>
 <ul>
-<li><code>psql postgres</code> : ouvrir l&rsquo;invité de commande postgres <img src="images/psql_postgres.png" alt="postgres" title="postgres"/></li>
-<li><code>psql -h localhost -U myusername mydatabasename</code> : Se connecter à une base de données</li>
-<li><code>postgres=# \\dt+</code> : lister les tables avec leur volumétrie (dans l&rsquo;invit&rsquo; de commande postgres)</li>
+<li><code>psql postgres</code> : ouvrir l&rsquo;invité de commande postgres</li>
+<li><code>psql -h localhost -U username databasename</code> : Se connecter à une base de données</li>
+<li><code>postgres=# \connect databasename</code> : Se connecter à une base de données depuis l&rsquo;invité de command postgres</li>
+<li><code>postgres=# \dt+</code> : lister les tables avec leur volumétrie (dans l&rsquo;invité de commande postgres)</li>
 </ul>
 <h2 id="mysql-commands">
   Mysql commands
@@ -463,14 +464,14 @@ https://github.com/alex-shpak/hugo-book
 <li><code>mysql -u user -p mypassword dbname</code> : Se connecter à une base de données</li>
 <li><code>mysql -u user -pmypassword dbname</code> : Se connecter à une base de données en spécifiant le mot de passe. (Retirer l&rsquo;espace)</li>
 <li><code>/Applications/MAMP/Library/bin/mysql -u user -p dbname</code> : Se connecter à une base de données de l&rsquo;application MAMP.</li>
-<li><code>mysqldump -pot -u \[uname\] -p\[pass\] \[dbname\] &gt; \[backupfile.sql\]</code> : Dump mysql</li>
-<li><code>mysqldump -pot -R -u \[uname\] -p\[pass\] \[dbname\] &gt; \[backupfile.sql\]</code> : Dump mysql. le -R permet d&rsquo;inclure les procédures stockées</li>
-<li><code>mysqldump -u \[uname\] -p\[pass\] \[dbname\] | gzip -9 &gt; \[backupfile.sql.gz\]</code> : Dump avec compression</li>
-<li><code>mysql -u \[uname\] -p\[pass\] \[db\_to\_restore\] &lt; \[backupfile.sql\]</code> : Restaurer mysqldump</li>
-<li><code>gunzip &lt; \[backupfile.sql.gz\] | mysql -u \[uname\] -p \[pass\] \[dbname\]</code> : Restaurer un dump avec compression</li>
-<li><code>mysqlimport -u \[uname\] -p \[pass\] \[dbname\] \[backupfile.sql\]</code> : Restaurer une base de données déjà existante</li>
-<li><code>mysql –u \[uname\] -p \[dbname\] &lt; \[script.sql\]</code> : Jouer le fichier script.sql</li>
-<li><code>nohup sh script.sh &gt; script\_out.log &amp;</code> : Permet de jouer un script sql en tâche de fond. Cela s&rsquo;avère utile pour jouer des scripts dont les temps d&rsquo;exécution sont long. En cas de coupure réseau avec la machine distante par exemple, le script continuera de s&rsquo;exécuter.</li>
+<li><code>mysqldump -pot -u [uname] -p[pass] [dbname] &gt; [backupfile.sql]</code> : Dump mysql</li>
+<li><code>mysqldump -pot -R -u [uname] -p[pass] [dbname] &gt; [backupfile.sql]</code> : Dump mysql, le -R permet d&rsquo;inclure les procédures stockées</li>
+<li><code>mysqldump -u [uname] -p[pass] [dbname] | gzip -9 &gt; [backupfile.sql.gz]</code> : Dump avec compression</li>
+<li><code>mysql -u [uname] -p[pass] [db_to_restore] &lt; [backupfile.sql]</code> : Restaurer mysqldump</li>
+<li><code>gunzip &lt; [backupfile.sql.gz] | mysql -u [uname] -p [pass] [dbname]</code> : Restaurer un dump avec compression</li>
+<li><code>mysqlimport -u [uname] -p [pass] [dbname] [backupfile.sql]</code> : Restaurer une base de données déjà existante</li>
+<li><code>mysql –u [uname] -p [dbname] &lt; [script.sql]</code> : Jouer le fichier script.sql</li>
+<li><code>nohup sh script.sh &gt; script_out.log &amp;</code> : Permet de jouer un script sql en tâche de fond. Cela s&rsquo;avère utile pour jouer des scripts dont les temps d&rsquo;exécution sont long. En cas de coupure réseau avec la machine distante par exemple, le script continuera de s&rsquo;exécuter.</li>
 </ul>
 <h2 id="vi-commands">
   VI commands
@@ -478,24 +479,25 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <ul>
 <li><code>vim nomdufichier</code> : éditer un fichier</li>
-<li><code>/ mot\_a\_rechercher</code> : recherche &quot; mot_a_rechercher&quot;=&quot;&quot; (vers=&quot;&quot; le=&quot;&quot; bas=&quot;&quot; du=&quot;&quot; fichier)=&quot;&quot; dans=&quot;&quot; fichier=&quot;&quot; ouvert=&quot;&quot; avec=&quot;&quot; vi&lt;br=&quot;&quot;&gt; Après avoir saisi / mot_a_rechercher Taper &ldquo;<code>n</code>&rdquo; : Permet de rechercher les occurrences suivantes du mot à rechercher</li>
-<li><code>? mot\_a\_rechercher</code> : recherche &ldquo;mot_a_rechercher&rdquo; vers le haut du fichier</li>
-<li><code>:166</code> : Aller à la ligne 166 <code>i</code> : i pour Insert. Permet d&rsquo;éditer le fichier</li>
+<li><code>/ mot_a_rechercher</code> : recherche &ldquo;mot_a_rechercher&rdquo; (vers le bas du fichier) dans fichier ouvert avec vi. Après avoir saisi / mot_a_rechercher Taper <code>n</code> : Permet de rechercher les occurrences suivantes du mot à rechercher</li>
+<li><code>? mot_a_rechercher</code> : recherche &ldquo;mot_a_rechercher&rdquo; vers le haut du fichier</li>
+<li><code>:166</code> : Aller à la ligne 166</li>
+<li><code>i</code> : i pour Insert. Permet d&rsquo;éditer le fichier</li>
 <li><code>:wq</code> : Sauvegarder (Write) et Quitter</li>
 <li><code>dd</code> : Efface la ligne où on se situe.</li>
 <li><code>:set paste</code> : à utiliser avec l&rsquo;éditeur vi avant d&rsquo;insérer du contenu pour conserver la forme du copier/coller. (espacement de lignes etc.)</li>
 <li><code>gg</code> : Aller à la fin du fichier.</li>
 <li><code>G</code> : Aller au début du fichier.</li>
-<li><code>:echo line('$')</code> : Permet d&rsquo;afficher le nombre de lignes du fichier en question.&lt;/br=&quot;&quot;&gt;</li>
+<li><code>:echo line('$')</code> : Permet d&rsquo;afficher le nombre de lignes du fichier en question.</li>
 </ul>
 <h2 id="network-commands">
   Network commands
   <a class="anchor" href="#network-commands">#</a>
 </h2>
 <ul>
-<li><code>host</code> <code>nomdedomaine.com :</code> Affiche l&rsquo;adresse IP du domaine</li>
+<li><code>host nomdedomaine.com</code> : Affiche l&rsquo;adresse IP du domaine</li>
 <li><code>hostname</code> : Affiche le nom de la machine</li>
-<li><code>nslookup &quot;www.nomdedomaine.com :</code> Affiche l&rsquo;adresse IP du domaine</li>
+<li><code>nslookup nomdedomaine.com</code> : Affiche l&rsquo;adresse IP du domaine</li>
 <li><code>tracert nomdedomaine.com</code> : Affiche la route réseau empruntée</li>
 <li><code>telnet nomdedomaine 53</code> : Moyen de vérifier que ma machine peut communiquer avec nomdedomaine sur le port 53</li>
 </ul>
@@ -513,7 +515,7 @@ https://github.com/alex-shpak/hugo-book
   Unsplit
   <a class="anchor" href="#unsplit">#</a>
 </h3>
-<pre tabindex="0"><code>cat x\* &gt; myFile.gzip
+<pre tabindex="0"><code>cat x* &gt; myFile.gzip
 </code></pre><h2 id="node-commands">
   Node commands
   <a class="anchor" href="#node-commands">#</a>
@@ -547,9 +549,9 @@ registry=https://your-custom-npm-registry.com/</p>
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/d78939a8a922f2dcd54ed5af02951ffe43b83832" title='Last modified by francoiducat | Nov 6, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/2e8f58f1168540175da25f3341f38f7fbe386a8f" title='Last modified by francoiducat | Oct 15, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 6, 2021</span>
+      <span>Oct 15, 2022</span>
     </a>
   </div>
 

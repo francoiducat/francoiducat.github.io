@@ -84,6 +84,16 @@ git remote add upstream git@github.com:username/git-repo.git Remove a remote fil
     
     <item>
       <title></title>
+      <link>https://francoiducat.github.io/docs/productivity/images-command-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://francoiducat.github.io/docs/productivity/images-command-line/</guid>
+      <description> Image command line using Mac OS Terminal # Batch resize image # Usage # ~ sips -Z 720 *.jpg Adjsut max image ratio examples: 640,720,1024,1280 etc.
+Combine two images into one # Prerequisites # ~ brew install imagemagick Usage # ~ convert +append image1.png image2.png combined_image.png Result # Image 1: # Image 2: # Combined image: # </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -91,15 +101,6 @@ git remote add upstream git@github.com:username/git-repo.git Remove a remote fil
       <description> Mac OS Screen record with audio for free # This video explains very clearly how to record your screen with audio on mac os for free.
 Without audio just use quicktime:
 Sources # https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://francoiducat.github.io/docs/productivity/resize-images-command-line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://francoiducat.github.io/docs/productivity/resize-images-command-line/</guid>
-      <description>Batch resize image using Mac OS command line # Usage # ~ sips -Z 720 *.jpg Adjsut max image ratio: 640,720,1024,1280 etc.</description>
     </item>
     
     <item>

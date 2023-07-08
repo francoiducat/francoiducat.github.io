@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content=" Kubernetes &amp; Docker commands for developers # Export pod logs # kubectl logs pod-name -n namespace-name &gt;&gt; /export/path/file.txt Use bach inside a pod # kubectl exec -it myPod -n myNameSpace -- /bin/bash Run container # docker run -p 8080:80 --name=nginx Run specific docker service # docker-compose up -d myDatabaseApp ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Réseau" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://francoiducat.github.io/tags/r%C3%A9seau/" />
-<title>Réseau | FDUCAT Notebook</title>
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content=" Kubernetes &amp; Docker commands for developers # Export pod logs # kubectl logs pod-name -n namespace-name &gt;&gt; /export/path/file.txt Use bach inside a pod # kubectl exec -it myPod -n myNameSpace -- /bin/bash Run container # docker run -p 8080:80 --name=nginx Run specific docker service # docker-compose up -d myDatabaseApp " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francoiducat.github.io/docs/devops/day-to-day-kubernetes-command/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2023-07-08T11:38:19+02:00" />
+<title>Day to Day Kubernetes Command | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e610a473b48f5c1534482d83a4e87390c16d300d987747c145b901e5d0bfe318.css" integrity="sha256-5hCkc7SPXBU0SC2DpOhzkMFtMA2Yd0fBRbkB5dC/4xg=" crossorigin="anonymous">
@@ -27,8 +29,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script><link rel="alternate" type="application/rss+xml" href="https://francoiducat.github.io/tags/r%C3%A9seau/index.xml" title="FDUCAT Notebook" />
-<!--
+</script><!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
@@ -105,7 +106,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/devops/day-to-day-kubernetes-command/" class="">Day to Day Kubernetes Command</a>
+    <a href="/docs/devops/day-to-day-kubernetes-command/" class="active">Day to Day Kubernetes Command</a>
   
 
         </li>
@@ -327,7 +328,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Réseau</strong>
+  <strong>Day to Day Kubernetes Command</strong>
 
   <label for="toc-control">
     
@@ -340,54 +341,20 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  
+<nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#kubernetes--docker-commands-for-developers">Kubernetes &amp; Docker commands for developers</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/administration-systeme/">Administration Systeme</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/wordpress/">WordPress</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#export-pod-logs">Export pod logs</a></li>
+        <li><a href="#use-bach-inside-a-pod">Use bach inside a pod</a></li>
+        <li><a href="#run-container">Run container</a></li>
+        <li><a href="#run-specific-docker-service">Run specific docker service</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/r%C3%A9seau/">Réseau</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/css/">css</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/jquery/">jquery</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
+
 
 
   </aside>
@@ -397,42 +364,31 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/notions-reseau/">Notions de bases en réseau</a>
-    </h2>
-    
-  <h5>Jan 11, 2011</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/administration-systeme/">Administration Systeme</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/r%C3%A9seau/">Réseau</a>
-  </div>
-  
-
-
-
-
-    <p>Notions de bases en réseau # Réseau (informatique) # Ensemble d&rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:
-Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc. Cables réseau ou cable ethernet: # UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux Carte réseau # Matériel qui permet d&rsquo;accéder au réseau.
-        <a href="/posts/notions-reseau/">...</a>
-      
-    </p>
-  </article>
-  
-
-  
+  <article class="markdown"><h2 id="kubernetes--docker-commands-for-developers">
+  Kubernetes &amp; Docker commands for developers
+  <a class="anchor" href="#kubernetes--docker-commands-for-developers">#</a>
+</h2>
+<h3 id="export-pod-logs">
+  Export pod logs
+  <a class="anchor" href="#export-pod-logs">#</a>
+</h3>
+<pre tabindex="0"><code>kubectl logs pod-name -n namespace-name &gt;&gt; /export/path/file.txt
+</code></pre><h3 id="use-bach-inside-a-pod">
+  Use bach inside a pod
+  <a class="anchor" href="#use-bach-inside-a-pod">#</a>
+</h3>
+<pre tabindex="0"><code>kubectl exec -it myPod -n myNameSpace  -- /bin/bash
+</code></pre><h3 id="run-container">
+  Run container
+  <a class="anchor" href="#run-container">#</a>
+</h3>
+<pre tabindex="0"><code>docker run -p 8080:80 --name=nginx
+</code></pre><h3 id="run-specific-docker-service">
+  Run specific docker service
+  <a class="anchor" href="#run-specific-docker-service">#</a>
+</h3>
+<pre tabindex="0"><code>docker-compose up -d myDatabaseApp
+</code></pre></article>
  
       
 
@@ -440,6 +396,12 @@ Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications e
         
   <div class="flex flex-wrap justify-between">
 
+
+  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/8e7d76ef5c07e7920d3ebda0d4c2e2d3311ec2e4" title='Last modified by francoiducat | Jul 8, 2023' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 8, 2023</span>
+    </a>
+  </div>
 
 
 
@@ -457,6 +419,10 @@ Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications e
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -466,54 +432,20 @@ Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications e
     <aside class="book-toc">
       <div class="book-toc-content">
         
-  <nav>
+  
+<nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#kubernetes--docker-commands-for-developers">Kubernetes &amp; Docker commands for developers</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/administration-systeme/">Administration Systeme</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/wordpress/">WordPress</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#export-pod-logs">Export pod logs</a></li>
+        <li><a href="#use-bach-inside-a-pod">Use bach inside a pod</a></li>
+        <li><a href="#run-container">Run container</a></li>
+        <li><a href="#run-specific-docker-service">Run specific docker service</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/r%C3%A9seau/">Réseau</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/css/">css</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/jquery/">jquery</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
+
 
  
       </div>

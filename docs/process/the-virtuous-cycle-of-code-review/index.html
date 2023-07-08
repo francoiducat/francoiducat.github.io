@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash
+Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.
+Let&rsquo;s get straight to the point.
+What are Code Reviews?">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash
+Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.
+Let&rsquo;s get straight to the point.
+What are Code Reviews?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2023-07-08T11:38:19+02:00" />
+<title>The Virtuous Cycle of Code Review | FDUCAT Notebook</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e610a473b48f5c1534482d83a4e87390c16d300d987747c145b901e5d0bfe318.css" integrity="sha256-5hCkc7SPXBU0SC2DpOhzkMFtMA2Yd0fBRbkB5dC/4xg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-199278356-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>FDUCAT Notebook</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Devops</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/day-to-day-bash-commands/" class="">Day to Day Bash Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/day-to-day-kubernetes-command/" class="">Day to Day Kubernetes Command</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/every-day-git-commands/" class="">Every Day Git Commands</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Java</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/java/springboot-graphql-client/" class="">Springboot Graphql Client</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Process</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/process/the-virtuous-cycle-of-code-review/" class="active">The Virtuous Cycle of Code Review</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Productivity</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/productivity/google-spreadsheet-tricks/" class="">Google Spreadsheet Tricks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/productivity/mac-screen-record-with-audio/" class="">MAC Screen Record With Audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/productivity/save-storage-pdf-images-videos/" class="">Save Storage Pdf Images Videos</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Web</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web/embed-pdf-in-html/" class="">Embed Pdf in HTML</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Notes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>The Virtuous Cycle of Code Review</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#what-are-code-reviews">What are Code Reviews?</a></li>
+    <li><a href="#why-do-code-reviews">Why do Code Reviews?</a></li>
+    <li><a href="#why-not">Why not?</a>
+      <ul>
+        <li><a href="#time-consuming">Time-consuming</a></li>
+        <li><a href="#an-inefficient-process">An Inefficient process</a></li>
+        <li><a href="#frustrating">Frustrating</a></li>
+      </ul>
+    </li>
+    <li><a href="#benefits">Benefits</a>
+      <ul>
+        <li><a href="#people">People</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#company">Company</a></li>
+      </ul>
+    </li>
+    <li><a href="#prerequisites">Prerequisites</a>
+      <ul>
+        <li><a href="#coding-style">Coding style</a></li>
+        <li><a href="#code-review-tools">Code review tools</a></li>
+        <li><a href="#respectful-and-constructive-feedback">Respectful and constructive feedback</a></li>
+        <li><a href="#be-open-to-suggested-changes">Be open to suggested changes</a></li>
+        <li><a href="#go-and-talk-in-person-if-necessary">Go and talk in person if necessary</a></li>
+        <li><a href="#ensure-traceability-for-decisions">Ensure traceability for decisions</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practices">Best Practices</a>
+      <ul>
+        <li><a href="#ci-checks">CI checks</a></li>
+        <li><a href="#be-fast">Be fast</a></li>
+        <li><a href="#focus-on-core-issues-less-nit-picking">Focus on core issues, less nit-picking</a></li>
+        <li><a href="#speed-vs-interruption">Speed vs. Interruption</a></li>
+        <li><a href="#integrate-code-review-into-your-daily-routine">Integrate code review into your daily routine</a></li>
+        <li><a href="#reduce-task-switching-as-it-kills-productivity">Reduce task switching as it kills productivity</a></li>
+        <li><a href="#review-frequently-not-in-a-big-bang-fashion">Review frequently not in a big bang fashion</a></li>
+        <li><a href="#give-feedback-in-a-timely-manner">Give feedback in a timely manner</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="the-virtuous-cycle-of-code-reviews">
+  The virtuous cycle of Code Reviews
+  <a class="anchor" href="#the-virtuous-cycle-of-code-reviews">#</a>
+</h1>
+<p><img src="/img/code-review.jpeg" alt="Photo by Alvaro Reyes on Unsplash" />
+<em><a href="https://unsplash.com/license">https://unsplash.com/license</a> Photo by Alvaro Reyes on Unsplash</em></p>
+<h2 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
+<p>Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to <strong>people</strong>, <strong>products</strong> and <strong>organisations</strong>.</p>
+<p>Let&rsquo;s get straight to the point.</p>
+<h2 id="what-are-code-reviews">
+  What are Code Reviews?
+  <a class="anchor" href="#what-are-code-reviews">#</a>
+</h2>
+<p>Code Reviews are a stage in the software development life cycle where developers check each other’s code for:</p>
+<ul>
+<li>inconsistencies with system and/or business requirements</li>
+<li>bugs</li>
+<li>readability</li>
+<li>sufficient test coverage.</li>
+<li>irregular formatting</li>
+<li>compliance with enterprise coding standards</li>
+</ul>
+<h2 id="why-do-code-reviews">
+  Why do Code Reviews?
+  <a class="anchor" href="#why-do-code-reviews">#</a>
+</h2>
+<p>Because as human beings we make mistakes, don&rsquo;t we? Honestly, do you know any developer that always produces code without any bugs? I don&rsquo;t. Looking at the requirements, are all cases fully implemented? Are the new automated tests sufficient for the new code? Do existing automated tests need to be rewritten to account for changes in the code? Does the new code conform to existing style guidelines?</p>
+<p>I let you answer these questions. For me, doing code reviews is a major pillar for the <strong>quality</strong> of the product that is delivered.</p>
+<p>In the meantime, in &ldquo;real&rdquo; life, doing Code Reviews isn&rsquo;t always a process that flows naturally.</p>
+<h2 id="why-not">
+  Why not?
+  <a class="anchor" href="#why-not">#</a>
+</h2>
+<pre tabindex="0"><code>10 lines of code = 10 issues.
+500 lines of code = “looks fine.”
+Code reviews.
+— I Am Devloper (@iamdevloper) November 5, 2013
+</code></pre><p>First, unless I&rsquo;m mistaken, the Code Review process isn&rsquo;t learned at school. Moreover, within organisations, the “traditional” approach to Code Reviews is often perceived as:</p>
+<h3 id="time-consuming">
+  Time-consuming
+  <a class="anchor" href="#time-consuming">#</a>
+</h3>
+<p><em>Instead of doing Code Reviews developers could write more code and deliver very much expected features by end users!</em></p>
+<p>Sure, it takes time. But that time isn&rsquo;t wasted–far from it. Skipping code reviews is only advisable for trivial changes.</p>
+<h3 id="an-inefficient-process">
+  An Inefficient process
+  <a class="anchor" href="#an-inefficient-process">#</a>
+</h3>
+<p><em>Code Reviews are just more interruptions while we could, again, deliver more features for our clients.</em></p>
+<h3 id="frustrating">
+  Frustrating
+  <a class="anchor" href="#frustrating">#</a>
+</h3>
+<p>Unfortunately, during Code Reviews, developers don&rsquo;t always give or receive positive and constructive feedback which sometimes leads to some kind of tension and frustration.</p>
+<h2 id="benefits">
+  Benefits
+  <a class="anchor" href="#benefits">#</a>
+</h2>
+<p>To my mind the most important benefits of code reviews are for people:</p>
+<h3 id="people">
+  People
+  <a class="anchor" href="#people">#</a>
+</h3>
+<h4 id="empowering-skills">
+  Empowering skills
+  <a class="anchor" href="#empowering-skills">#</a>
+</h4>
+<p>Code reviews enabled me to become a more skilled developer. This is a great exercise to get used to <em>reading code</em>. Your peers don&rsquo;t always code as you do so you discover new methods and techniques.</p>
+<h4 id="mentoring">
+  Mentoring
+  <a class="anchor" href="#mentoring">#</a>
+</h4>
+<p>When new members join the team, more seasoned engineers mentor the newer members. Sharing techniques transcend seniority, where every developer is equally able to share, cooperate and improve their skills. I learned a lot from code reviews feedback.</p>
+<h4 id="positive-peer-pressure">
+  Positive peer pressure
+  <a class="anchor" href="#positive-peer-pressure">#</a>
+</h4>
+<p>When you know that your code will be reviewed by a teammate, you make an extra effort to ensure that all tests are passing and the code is as well-designed. That mindfulness also tends to make the coding process itself go smoother and, ultimately, faster.</p>
+<h4 id="collective-code-ownership">
+  Collective code ownership
+  <a class="anchor" href="#collective-code-ownership">#</a>
+</h4>
+<p>Requiring code review before merging ensures that no code gets in unreviewed and that the whole team takes ownership of the code. Collective code ownership helps not only when new people start with the team, but as well when people go on vacation.</p>
+<h4 id="onboarding">
+  Onboarding
+  <a class="anchor" href="#onboarding">#</a>
+</h4>
+<p>Making source code readable by anyone who might be introduced to the project at any given time during development boosts the onboarding of new team members.</p>
+<h4 id="transferring-knowledge">
+  Transferring knowledge
+  <a class="anchor" href="#transferring-knowledge">#</a>
+</h4>
+<p>Code reviews help share knowledge across the team. It also avoids having one single person have the knowledge on some processes (which put the team at risk.)</p>
+<h4 id="enabling-time-off">
+  Enabling time off
+  <a class="anchor" href="#enabling-time-off">#</a>
+</h4>
+<p>Nobody likes to be the sole point of contact on a piece of code. Likewise, nobody wants to dive into a critical piece of code they didn’t write–especially during a production emergency. If you find yourself tied to your desk on the version control system, code review is an excellent way to find freedom. Freedom to take that needed vacation, or freedom to spend some time working on a different area of the product.</p>
+<h3 id="product">
+  Product
+  <a class="anchor" href="#product">#</a>
+</h3>
+<p>Code Reviews bring benefits to the product ensuring consistency, robustness, and sustainability.</p>
+<h4 id="consistent-design-and-implementation">
+  Consistent Design and Implementation
+  <a class="anchor" href="#consistent-design-and-implementation">#</a>
+</h4>
+<p>Code reviews serve as a check and balance against different interpretations of the scope and requirements.
+Code reviews facilitate interactions about the codebase. Often, teams have hidden knowledge within the code that surfaces during code reviews. Newer members, with fresh eyes, discover generally areas that need a new perspective. Code reviews also helps ensure new insight is tempered with existing knowledge.</p>
+<h4 id="ensuring-maintainability">
+  Ensuring maintainability
+  <a class="anchor" href="#ensuring-maintainability">#</a>
+</h4>
+<p>Code reviews are useful in the long run as team members continue to change in projects.</p>
+<h4 id="quality--performance">
+  Quality &amp; Performance
+  <a class="anchor" href="#quality--performance">#</a>
+</h4>
+<p>It gives a fresh set of eyes to identify coding errors that can eventually lead to serious bugs.</p>
+<ul>
+<li>Design – Is the code well designed?</li>
+<li>Naming conventions – Are there readable names for classes, variables, and methods for ease of understanding?</li>
+<li>Comments – Are the comments useful, meaningful, and clear?</li>
+<li>Conciseness - Can we shorten the code? (/!\ less readability!)</li>
+<li>Complexity – Can the code be made simpler? Will it be easy for future developers to understand the code?</li>
+<li>Tests - Are the new automated tests sufficient for the new code?</li>
+<li>Documentation - Is it well-documented?</li>
+</ul>
+<p>Eventually, it helps to find bugs early and often.</p>
+<h3 id="company">
+  Company
+  <a class="anchor" href="#company">#</a>
+</h3>
+<p>I do believe that sereine people and high-quality products serve successful organizations. That&rsquo;s the virtuous cycle of code reviews.</p>
+<p>Last but not least, code reviews save the company money.</p>
+<h4 id="saving-money">
+  Saving money
+  <a class="anchor" href="#saving-money">#</a>
+</h4>
+<p>Code reviews are best practices, but they take the time that your leadership may have decided is better spent on pushing forward with projects and getting applications to market faster. Have you ever, however, sat down with a calculator and figured out exactly what it’s costing your business not to perform code reviews?</p>
+<p>Well, I suggest you have a look at <a href="https://smartbear.com/product/collaborator/roi-calculator/">SmartBear Code Review ROI calculator</a>. The tool, based on data from SmartBear’s customers as well as industry benchmarks, allows you to see what code reviews could save your business – and what it costs if you forego them.</p>
+<p>Here is an example:</p>
+<p><img src="/img/code-reviews-roi.png" alt="code-review-roi-calculator" /></p>
+<h2 id="prerequisites">
+  Prerequisites
+  <a class="anchor" href="#prerequisites">#</a>
+</h2>
+<p>In order to be efficient, several prerequisites to codes reviews should be implemented.</p>
+<h3 id="coding-style">
+  Coding style
+  <a class="anchor" href="#coding-style">#</a>
+</h3>
+<p>Decide and implement a <a href="https://medium.com/swlh/configuring-google-style-guide-for-java-for-intellij-c727af4ef248">coding style</a> that every developer follows to avoid reviewing old codebase unnecessarily.</p>
+<h3 id="code-review-tools">
+  Code review tools
+  <a class="anchor" href="#code-review-tools">#</a>
+</h3>
+<p>Use a source code repository (like <a href="https://github.com">github.com</a>) that usually gives you the possibility to perform code reviews.</p>
+<h3 id="respectful-and-constructive-feedback">
+  Respectful and constructive feedback
+  <a class="anchor" href="#respectful-and-constructive-feedback">#</a>
+</h3>
+<p>Even though it reads like a no-brainer, code reviews do put the code author in a vulnerable position, so you must be considerate of that. Your job is to give constructive and valuable feedback but also to do so in a respectful manner. It is just so easy to hurt someone&rsquo;s feelings – especially in written form. Too often time pressure might make you give a sloppy answer that can be misinterpreted.
+Giving constructive feedback and being positive as we receive feedback could be yet another long article ;-)</p>
+<h3 id="be-open-to-suggested-changes">
+  Be open to suggested changes
+  <a class="anchor" href="#be-open-to-suggested-changes">#</a>
+</h3>
+<p>Receiving unexpected comments might make you tense and defensive. Try to prepare yourself mentally and work on your ability to be open to suggestions and different viewpoints. Always start with the assumption that the reviewer had the best intention. If some feedback made you uncomfortable try to sort things out as soon as possible.</p>
+<h3 id="go-and-talk-in-person-if-necessary">
+  Go and talk in person if necessary
+  <a class="anchor" href="#go-and-talk-in-person-if-necessary">#</a>
+</h3>
+<p>Code review tools and chat tools allow us to communicate with our peers in an asynchronous and effortless way. Sometimes it is a good idea to have more personal face-to-face conversations to resolve some complex issues.</p>
+<h3 id="ensure-traceability-for-decisions">
+  Ensure traceability for decisions
+  <a class="anchor" href="#ensure-traceability-for-decisions">#</a>
+</h3>
+<p>Even though less traceable conversations, such as face-to-face or video calls can make a big difference in team dynamics, it is important to document the discussion. Especially the code review outcome should be tracked for future reference by using traceable tools such as the code review tool.
+The code review tool is the right communication channel for all simple matters, as it allows the whole team to follow along, and enables to look up decisions and understand code development after the fact.</p>
+<h2 id="best-practices">
+  Best Practices
+  <a class="anchor" href="#best-practices">#</a>
+</h2>
+<p>Having prerequisites in place, you may also adopt a few best practices to smooth code reviews.</p>
+<h3 id="ci-checks">
+  CI checks
+  <a class="anchor" href="#ci-checks">#</a>
+</h3>
+<p>Once a pull request is triggered, you can set up your code repository to check if the branch is &ldquo;mergeable.&rdquo;
+For example : 2 peers approbations required before merge.</p>
+<h3 id="be-fast">
+  Be fast
+  <a class="anchor" href="#be-fast">#</a>
+</h3>
+<p>If you are not in the middle of a focused task, you should do a code review shortly after it comes in.
+One business day is the maximum time it should take to respond to a code review request
+At Google, they optimize for the speed at which a team of developers can produce a product together, as opposed to optimizing for the speed at which an individual developer can write code. The speed of individual development is important, it’s just not as important as the velocity of the entire team.
+When code reviews are slow, several things happen:
+The velocity of the team as a whole is decreased. Yes, the individual who doesn’t respond quickly to the review gets other work done. However, new features and bug fixes for the rest of the team are delayed by days, weeks, or months as each CL waits for review and re-review.
+Developers start to protest the code review process. If a reviewer only responds every few days, but requests major changes to the CL each time, that can be frustrating and difficult for developers. Often, this is expressed as complaints about how “strict” the reviewer is being. If the reviewer requests the same substantial changes (changes which really do improve code health), but responds quickly every time the developer makes an update, the complaints tend to disappear. Most complaints about the code review process are actually resolved by making the process faster.</p>
+<h3 id="focus-on-core-issues-less-nit-picking">
+  Focus on core issues, less nit-picking
+  <a class="anchor" href="#focus-on-core-issues-less-nit-picking">#</a>
+</h3>
+<p>Your goal as a reviewer should be to help with core issues, such as bugs, architectural problems, structural problems or problems that will lead to maintainability issues.
+Obviously, if you see typos, badly named variables or styling issues, you might also point that out. Still, this is not your main tasks and, understandably, over discussing minor issues isn’t valuable to code authors.</p>
+<h3 id="speed-vs-interruption">
+  Speed vs. Interruption
+  <a class="anchor" href="#speed-vs-interruption">#</a>
+</h3>
+<p>There is one time where the consideration of personal velocity trumps team velocity. If you are in the middle of a focused task, such as writing code, don’t interrupt yourself to do a code review. Research has shown that it can take a long time for a developer to get back into a smooth flow of development after being interrupted. So interrupting yourself while coding is actually more expensive to the team than making another developer wait a bit for a code review.
+Instead, wait for a break point in your work before you respond to a request for review. This could be when your current coding task is completed, after lunch, returning from a meeting, coming back from the breakroom, etc.</p>
+<h3 id="integrate-code-review-into-your-daily-routine">
+  Integrate code review into your daily routine
+  <a class="anchor" href="#integrate-code-review-into-your-daily-routine">#</a>
+</h3>
+<h3 id="reduce-task-switching-as-it-kills-productivity">
+  Reduce task switching as it kills productivity
+  <a class="anchor" href="#reduce-task-switching-as-it-kills-productivity">#</a>
+</h3>
+<h3 id="review-frequently-not-in-a-big-bang-fashion">
+  Review frequently not in a big bang fashion
+  <a class="anchor" href="#review-frequently-not-in-a-big-bang-fashion">#</a>
+</h3>
+<h3 id="give-feedback-in-a-timely-manner">
+  Give feedback in a timely manner
+  <a class="anchor" href="#give-feedback-in-a-timely-manner">#</a>
+</h3>
+<h2 id="conclusion">
+  Conclusion
+  <a class="anchor" href="#conclusion">#</a>
+</h2>
+<p>Resistance to change always leads to a status quo for which there is a long way to go before progress can be made.</p>
+<p>Peer reviews are a defining principle of Agile, playing a critical role in creating consistency in the source code and setting the stage for better QA testing and smoother integration.</p>
+<p>Not only do code reviews help make me a better developer, but it ensures the long-term success and proper development of our product.</p>
+<p>Sources:</p>
+<p><a href="https://www.brightspot.com/learn/articles/5-reasons-why-the-code-review-process-is-critical-for-developers">https://www.brightspot.com/learn/articles/5-reasons-why-the-code-review-process-is-critical-for-developers</a>
+<a href="https://smartbear.com/learn/code-review/agile-code-review-process/">https://smartbear.com/learn/code-review/agile-code-review-process/</a>
+<a href="https://www.browserstack.com/guide/code-review-benefits">https://www.browserstack.com/guide/code-review-benefits</a>
+<a href="https://smartbear.com/learn/code-review/why-review-code/">https://smartbear.com/learn/code-review/why-review-code/</a>
+<a href="https://google.github.io/eng-practices/review/reviewer/speed.html">https://google.github.io/eng-practices/review/reviewer/speed.html</a>
+<a href="https://workplace.stackexchange.com/questions/98250/slowed-down-by-code-reviews">https://workplace.stackexchange.com/questions/98250/slowed-down-by-code-reviews</a>
+<a href="https://www.michaelagreiler.com/code-review-best-practices/">https://www.michaelagreiler.com/code-review-best-practices/</a>
+<a href="https://www.atlassian.com/agile/software-development/code-">https://www.atlassian.com/agile/software-development/code-</a>
+<a href="https://www.devprojournal.com/software-development-trends/how-much-money-do-code-reviews-save-software-developers/">https://www.devprojournal.com/software-development-trends/how-much-money-do-code-reviews-save-software-developers/</a>
+<a href="https://smartbear.com/product/collaborator/roi-calculator/">https://smartbear.com/product/collaborator/roi-calculator/</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/8e7d76ef5c07e7920d3ebda0d4c2e2d3311ec2e4" title='Last modified by francoiducat | Jul 8, 2023' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 8, 2023</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#what-are-code-reviews">What are Code Reviews?</a></li>
+    <li><a href="#why-do-code-reviews">Why do Code Reviews?</a></li>
+    <li><a href="#why-not">Why not?</a>
+      <ul>
+        <li><a href="#time-consuming">Time-consuming</a></li>
+        <li><a href="#an-inefficient-process">An Inefficient process</a></li>
+        <li><a href="#frustrating">Frustrating</a></li>
+      </ul>
+    </li>
+    <li><a href="#benefits">Benefits</a>
+      <ul>
+        <li><a href="#people">People</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#company">Company</a></li>
+      </ul>
+    </li>
+    <li><a href="#prerequisites">Prerequisites</a>
+      <ul>
+        <li><a href="#coding-style">Coding style</a></li>
+        <li><a href="#code-review-tools">Code review tools</a></li>
+        <li><a href="#respectful-and-constructive-feedback">Respectful and constructive feedback</a></li>
+        <li><a href="#be-open-to-suggested-changes">Be open to suggested changes</a></li>
+        <li><a href="#go-and-talk-in-person-if-necessary">Go and talk in person if necessary</a></li>
+        <li><a href="#ensure-traceability-for-decisions">Ensure traceability for decisions</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practices">Best Practices</a>
+      <ul>
+        <li><a href="#ci-checks">CI checks</a></li>
+        <li><a href="#be-fast">Be fast</a></li>
+        <li><a href="#focus-on-core-issues-less-nit-picking">Focus on core issues, less nit-picking</a></li>
+        <li><a href="#speed-vs-interruption">Speed vs. Interruption</a></li>
+        <li><a href="#integrate-code-review-into-your-daily-routine">Integrate code review into your daily routine</a></li>
+        <li><a href="#reduce-task-switching-as-it-kills-productivity">Reduce task switching as it kills productivity</a></li>
+        <li><a href="#review-frequently-not-in-a-big-bang-fashion">Review frequently not in a big bang fashion</a></li>
+        <li><a href="#give-feedback-in-a-timely-manner">Give feedback in a timely manner</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

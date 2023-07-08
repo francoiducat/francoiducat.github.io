@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Charger ses propres fichiers .css et .js dans Wordpress">
+<meta name="description" content="Every day Git commands for developers # Here are some day to day useful git commands
+Refresh git repo after .gitignore edition # When you add a new file to the .gitignore it is not immediatly ignored. It stills appears on git status
+To refresh the git repo
+git rm -rf --cached . or
+git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard changes on a file # git checkout fileYouDiscardChanges Show all remotes # This show origin and upstream remotes">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Charger ses propres fichiers .css et .js dans Wordpress" />
-<meta property="og:description" content="Charger ses propres fichiers .css et .js dans Wordpress" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Every day Git commands for developers # Here are some day to day useful git commands
+Refresh git repo after .gitignore edition # When you add a new file to the .gitignore it is not immediatly ignored. It stills appears on git status
+To refresh the git repo
+git rm -rf --cached . or
+git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard changes on a file # git checkout fileYouDiscardChanges Show all remotes # This show origin and upstream remotes" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2010-12-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-09-27T18:31:15+02:00" />
-<title>Charger ses propres fichiers .css et .js dans Wordpress | FDUCAT Notebook</title>
+<meta property="og:url" content="https://francoiducat.github.io/docs/devops/every-day-git-commands/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2023-07-08T11:38:19+02:00" />
+<title>Every Day Git Commands | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e610a473b48f5c1534482d83a4e87390c16d300d987747c145b901e5d0bfe318.css" integrity="sha256-5hCkc7SPXBU0SC2DpOhzkMFtMA2Yd0fBRbkB5dC/4xg=" crossorigin="anonymous">
@@ -119,7 +127,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/devops/every-day-git-commands/" class="">Every Day Git Commands</a>
+    <a href="/docs/devops/every-day-git-commands/" class="active">Every Day Git Commands</a>
   
 
         </li>
@@ -328,7 +336,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Charger ses propres fichiers .css et .js dans Wordpress</strong>
+  <strong>Every Day Git Commands</strong>
 
   <label for="toc-control">
     
@@ -344,8 +352,17 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#objectif">Objectif</a></li>
-    <li><a href="#solution">Solution</a></li>
+    <li>
+      <ul>
+        <li><a href="#refresh-git-repo-after-gitignore-edition">Refresh git repo after .gitignore edition</a></li>
+        <li><a href="#discard-changes-on-a-file">Discard changes on a file</a></li>
+        <li><a href="#show-all-remotes">Show all remotes</a></li>
+        <li><a href="#add-upstream-remote">Add upstream remote</a></li>
+        <li><a href="#remove-a-remote-file">Remove a remote file</a></li>
+        <li><a href="#shortcut-add--commit-all-files">Shortcut add &amp; commit all files</a></li>
+        <li><a href="#show-git-history">Show git history</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -358,71 +375,75 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown">
-  <h1>
-    <a href="/posts/charger-ses-propres-fichiers-css-dans-wordpress/">Charger ses propres fichiers .css et .js dans Wordpress</a>
-  </h1>
-  
-  <h5>Dec 2, 2010</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/wordpress/">WordPress</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/css/">css</a>, 
-      <a href="/tags/jquery/">jquery</a>
-  </div>
-  
-
-
-
-<h1 id="charger-ses-propres-fichiers-css-et-js-dans-wordpress">
-  Charger ses propres fichiers .css et .js dans Wordpress
-  <a class="anchor" href="#charger-ses-propres-fichiers-css-et-js-dans-wordpress">#</a>
+  <article class="markdown"><h1 id="every-day-git-commands-for-developers">
+  Every day Git commands for developers
+  <a class="anchor" href="#every-day-git-commands-for-developers">#</a>
 </h1>
-<h2 id="objectif">
-  Objectif
-  <a class="anchor" href="#objectif">#</a>
-</h2>
-<p>Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.</p>
-<h2 id="solution">
-  Solution
-  <a class="anchor" href="#solution">#</a>
-</h2>
-<p>Sur un site &ldquo;non wordpress&rdquo; on pourrait inclure nos scripts entre les balises <code>&lt;head&gt;</code> de notre page HTML.</p>
-<p>Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&rsquo;utiliser les méthodes</p>
-<ul>
-<li><code>_wp_enqueue_script_</code></li>
-<li><code>_wp_enqueue_style_</code></li>
-</ul>
-<p>du fichier <code>function.php</code>.</p>
-<p>Voici un exemple de code à inclure dans le fichier function.php :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">//Créer une fonction pour appeler les fichiers javascript et css
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">load_my_files</span>() {   
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Charger les fichiers SAUF sur l&#39;administration du site
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">is_admin</span>()) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Load js files
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wp_enqueue_script</span>(<span style="color:#e6db74">&#39;script1&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/js/script1.js&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wp_enqueue_script</span>(<span style="color:#e6db74">&#39;script2&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/js/script2.js&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Load css files
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wp_enqueue_style</span>(<span style="color:#e6db74">&#39;style2&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/css/style2.css&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wp_enqueue_style</span>(<span style="color:#e6db74">&#39;style1&#39;</span>, <span style="color:#e6db74">&#39;/wp-content/themes/custom_theme/css/style1.css&#39;</span>);
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Charger notre fonction à l&#39;initialisation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">add_action</span>(<span style="color:#e6db74">&#39;init&#39;</span>, <span style="color:#e6db74">&#39;load_my_files&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div>
-<p>Puis déposer sur votre serveur les fichiers .js et .css à dans les dossiers créés à cet effet comme dans l&rsquo;example ci-dessus</p>
-</article>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" alt="git" /></p>
+<p>Here are some day to day useful git commands</p>
+<h3 id="refresh-git-repo-after-gitignore-edition">
+  Refresh git repo after .gitignore edition
+  <a class="anchor" href="#refresh-git-repo-after-gitignore-edition">#</a>
+</h3>
+<p>When you add a new file to the <code>.gitignore</code> it is not immediatly ignored. It stills appears on <code>git status</code></p>
+<p>To refresh the git repo</p>
+<pre tabindex="0"><code> git rm -rf --cached .
+</code></pre><p>or</p>
+<pre tabindex="0"><code> git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo
+</code></pre><h3 id="discard-changes-on-a-file">
+  Discard changes on a file
+  <a class="anchor" href="#discard-changes-on-a-file">#</a>
+</h3>
+<pre tabindex="0"><code> git checkout fileYouDiscardChanges
+</code></pre><h3 id="show-all-remotes">
+  Show all remotes
+  <a class="anchor" href="#show-all-remotes">#</a>
+</h3>
+<p>This show origin and upstream remotes</p>
+<pre tabindex="0"><code>git remote -v
+git remote show origin #shows branches, tags etc.
+git remote show upstream #shows branches, tags etc.
+</code></pre><h3 id="add-upstream-remote">
+  Add upstream remote
+  <a class="anchor" href="#add-upstream-remote">#</a>
+</h3>
+<p>(vs origin remote)</p>
+<pre tabindex="0"><code>git remote add upstream git@github.com:username/git-repo.git
+</code></pre><h3 id="remove-a-remote-file">
+  Remove a remote file
+  <a class="anchor" href="#remove-a-remote-file">#</a>
+</h3>
+<p>Remove a remote file or directory from a Git repository without deleting it from the local filesystem</p>
+<h4 id="for-single-file">
+  For single file:
+  <a class="anchor" href="#for-single-file">#</a>
+</h4>
+<pre tabindex="0"><code>git rm --cached myremotefiletodelete.log
+git commit -m &#34;remove file from repo&#34;
+git push
+</code></pre><h4 id="for-single-directory">
+  For single directory:
+  <a class="anchor" href="#for-single-directory">#</a>
+</h4>
+<pre tabindex="0"><code>git rm --cached -r myremotedirectortytodelete
+git commit -m &#34;remove folder from repo&#34;
+git push
+</code></pre><h3 id="shortcut-add--commit-all-files">
+  Shortcut add &amp; commit all files
+  <a class="anchor" href="#shortcut-add--commit-all-files">#</a>
+</h3>
+<p>Without shortcut</p>
+<pre tabindex="0"><code>git add .
+git commit -m &#34;commit message&#34;
+</code></pre><p>With shortcut</p>
+<pre tabindex="0"><code>git commit -am &#34;commit message&#34;
+</code></pre><h3 id="show-git-history">
+  Show git history
+  <a class="anchor" href="#show-git-history">#</a>
+</h3>
+<p>using pretty format</p>
+<pre tabindex="0"><code>git log --pretty=format:&#34;%h - %an, %ar : %s&#34;
+</code></pre></article>
  
       
 
@@ -431,9 +452,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/323a12819cb69b9299e4782fcd9c4657cb6b0e42" title='Last modified by francoiducat | Sep 27, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/8e7d76ef5c07e7920d3ebda0d4c2e2d3311ec2e4" title='Last modified by francoiducat | Jul 8, 2023' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Sep 27, 2021</span>
+      <span>Jul 8, 2023</span>
     </a>
   </div>
 
@@ -469,8 +490,17 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#objectif">Objectif</a></li>
-    <li><a href="#solution">Solution</a></li>
+    <li>
+      <ul>
+        <li><a href="#refresh-git-repo-after-gitignore-edition">Refresh git repo after .gitignore edition</a></li>
+        <li><a href="#discard-changes-on-a-file">Discard changes on a file</a></li>
+        <li><a href="#show-all-remotes">Show all remotes</a></li>
+        <li><a href="#add-upstream-remote">Add upstream remote</a></li>
+        <li><a href="#remove-a-remote-file">Remove a remote file</a></li>
+        <li><a href="#shortcut-add--commit-all-files">Shortcut add &amp; commit all files</a></li>
+        <li><a href="#show-git-history">Show git history</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

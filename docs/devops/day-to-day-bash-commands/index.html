@@ -16,7 +16,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.c57387979875eda56795e26a24eb84eef6fbaf2a9b13f1910eca14c6e3da4194.css" integrity="sha256-xXOHl5h17aVnleJqJOuE7vb7ryqbE/GRDsoUxuPaQZQ=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.5493628b8742b195a718832efda879734f2df283c9b789252a04cfb1a19e1df3.js" integrity="sha256-VJNii4dCsZWnGIMu/ah5c08t8oPJt4klKgTPsaGeHfM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.e4774cfb37b794a0cfbd69bcdec87191ca37dda6c3d4482bf1f4987d93803d85.js" integrity="sha256-5HdM&#43;ze3lKDPvWm83shxkco33abD1Egr8fSYfZOAPYU=" crossorigin="anonymous"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
 <script>
@@ -350,9 +350,6 @@ https://github.com/alex-shpak/hugo-book
       </ul>
     </li>
     <li><a href="#postgres-commands">Postgres commands</a></li>
-  </ul>
-
-  <ul>
     <li><a href="#mysql-commands">Mysql commands</a></li>
     <li><a href="#vi-commands">VI commands</a></li>
     <li><a href="#network-commands">Network commands</a></li>
@@ -491,13 +488,10 @@ https://github.com/alex-shpak/hugo-book
 <li><code>postgres=# DROP DATABASE db_name WITH (FORCE);</code> Drop database with force</li>
 <li><code>postgres=# CREATE DATABASE my_db OWNER fducat;</code> Create database specific the owner</li>
 <li><code>postgres=# SELECT usename, client_addr, application_name, count(1) FROM pg_stat_activity group by 1,2,3;</code>: Track user activity</li>
+<li><code>pg_dump -d database_name -t table_to_dump &gt; dumped_table.sql</code>: Dump table</li>
+<li><code>COPY table_name FROM '/path/to/csv/dump.txt' WITH (FORMAT csv);</code>: Restore dump file</li>
+<li><code>SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE usename ='francois.ducatillon';</code>: Track user activity</li>
 </ul>
-<h1 id="pgadmin">
-  PGADMIN
-  <a class="anchor" href="#pgadmin">#</a>
-</h1>
-<p>SELECT pg_terminate_backend(pid) FROM pg_stat_activity
-WHERE usename =&lsquo;francois.ducatillon&rsquo;;</p>
 <h2 id="mysql-commands">
   Mysql commands
   <a class="anchor" href="#mysql-commands">#</a>
@@ -636,9 +630,6 @@ registry=https://your-custom-npm-registry.com/</p>
       </ul>
     </li>
     <li><a href="#postgres-commands">Postgres commands</a></li>
-  </ul>
-
-  <ul>
     <li><a href="#mysql-commands">Mysql commands</a></li>
     <li><a href="#vi-commands">VI commands</a></li>
     <li><a href="#network-commands">Network commands</a></li>

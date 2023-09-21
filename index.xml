@@ -34,7 +34,7 @@ _wp_enqueue_script_ _wp_enqueue_style_ du fichier function.php.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/</guid>
-      <description>Day to day bash commands for developers # Bash commands # cd nom du dossier entrer dans un dossier cd .. : revenir au dossier précédant cat nomdufichier : affiche le contenu d&amp;rsquo;un fichier pwd : dis moi où je suis ! mkdir nomdudossier : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&amp;rsquo;utilisateur (la &amp;ldquo;home directory&amp;rdquo; de l&amp;rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.</description>
+      <description>Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&amp;rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&amp;rsquo;utilisateur (la &amp;ldquo;home directory&amp;rdquo; de l&amp;rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.</description>
     </item>
     
     <item>

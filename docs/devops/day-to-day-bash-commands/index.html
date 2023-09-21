@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Day to day bash commands for developers # Bash commands # cd nom du dossier entrer dans un dossier cd .. : revenir au dossier précédant cat nomdufichier : affiche le contenu d&rsquo;un fichier pwd : dis moi où je suis ! mkdir nomdudossier : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.">
+<meta name="description" content="Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Day to day bash commands for developers # Bash commands # cd nom du dossier entrer dans un dossier cd .. : revenir au dossier précédant cat nomdufichier : affiche le contenu d&rsquo;un fichier pwd : dis moi où je suis ! mkdir nomdudossier : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage." />
+<meta property="og:description" content="Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/" /><meta property="article:section" content="docs" />
 
@@ -16,7 +16,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.c57387979875eda56795e26a24eb84eef6fbaf2a9b13f1910eca14c6e3da4194.css" integrity="sha256-xXOHl5h17aVnleJqJOuE7vb7ryqbE/GRDsoUxuPaQZQ=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.e4774cfb37b794a0cfbd69bcdec87191ca37dda6c3d4482bf1f4987d93803d85.js" integrity="sha256-5HdM&#43;ze3lKDPvWm83shxkco33abD1Egr8fSYfZOAPYU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d13ba59fd832f5410ca0a7c383a18d1df09a9d87223441c992660ec6bda95195.js" integrity="sha256-0Tuln9gy9UEMoKfDg6GNHfCanYciNEHJkmYOxr2pUZU=" crossorigin="anonymous"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
 <script>
@@ -386,21 +386,21 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#bash-commands">#</a>
 </h2>
 <ul>
-<li><code>cd nom du dossier</code> entrer dans un dossier</li>
+<li><code>cd folder_name</code> entrer dans un dossier</li>
 <li><code>cd ..</code> : revenir au dossier précédant</li>
-<li><code>cat nomdufichier</code> : affiche le contenu d&rsquo;un fichier</li>
+<li><code>cat file_name</code> : affiche le contenu d&rsquo;un fichier</li>
 <li><code>pwd</code> : dis moi où je suis !</li>
-<li><code>mkdir nomdudossier</code> : créer un dossier</li>
+<li><code>mkdir folder_name</code> : créer un dossier</li>
 <li><code>cd / :</code> Aller à la racine du serveur</li>
 <li><code>cd :</code> Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur)</li>
 <li><code>df -h :</code> Affiche les informations sur le volume de stockage. (h pour <strong>h</strong>uman)</li>
 <li><code>du -hd1 (anciennement du -h --max-depth=1):</code> Affiche les informations sur le volume de stockage du répertoire dans lequel on se trouve.(&ldquo;disk free&rdquo;,&ldquo;disk usage&rdquo;)</li>
-<li><code>rmdir nomdudossier :</code> supprimer un dossier</li>
-<li><code>rmdir -rf nomdudossier :</code> supprimer un dossier <strong>non vide.</strong> Attention, cela supprime tous le contenu à l&rsquo;intérieur du dossier (sous dossiers et fichiers)</li>
+<li><code>rmdir file_name :</code> supprimer un dossier</li>
+<li><code>rmdir -rf file_name :</code> supprimer un dossier <strong>non vide.</strong> Attention, cela supprime tous le contenu à l&rsquo;intérieur du dossier (sous dossiers et fichiers)</li>
 <li><code>touch nomdufichier</code> : créer un fichier ou mettre à jour la date de modification sur un fichier existant.</li>
-<li><code>chmod 700 nomdufichier</code> : Modifier les permissions du fichier/dossier</li>
-<li><code>chmod 777 -R dossier</code> : Modifier les permissions du dossier ainsi que celles de tous les sous-dossiers et fichiers inclus</li>
-<li><code>chwon -R root:root mondossier</code> : Modifie le propriétaire d&rsquo;un dossier (avec sous dossiers et fichiers inclus dans mondossier)</li>
+<li><code>chmod 700 file_name</code> : Modifier les permissions du fichier/dossier</li>
+<li><code>chmod 777 -R folder_name</code> : Modifier les permissions du dossier ainsi que celles de tous les sous-dossiers et fichiers inclus</li>
+<li><code>chwon -R root:root folder_name</code> : Modifie le propriétaire d&rsquo;un dossier (avec sous dossiers et fichiers inclus dans mondossier)</li>
 <li><code>passwd utilisateur</code>: Changer le mot de passe de l&rsquo;utilisateur</li>
 <li><code>su -</code> : Se connecter en root</li>
 <li><code>su -utilisateur</code> : Se connecter avec utilisateur</li>
@@ -486,11 +486,14 @@ https://github.com/alex-shpak/hugo-book
 <li><code>postgres=# \connect databasename</code> : Connect to a database from postgres prompt</li>
 <li><code>postgres=# \dt+</code> : List tables with details (dans l&rsquo;invité de commande postgres)</li>
 <li><code>postgres=# DROP DATABASE db_name WITH (FORCE);</code> Drop database with force</li>
-<li><code>postgres=# CREATE DATABASE my_db OWNER fducat;</code> Create database specific the owner</li>
+<li><code>postgres=# CREATE DATABASE my_db OWNER username;</code> Create database specific the owner</li>
 <li><code>postgres=# SELECT usename, client_addr, application_name, count(1) FROM pg_stat_activity group by 1,2,3;</code>: Track user activity</li>
 <li><code>pg_dump -d database_name -t table_to_dump &gt; dumped_table.sql</code>: Dump table</li>
-<li><code>COPY table_name FROM '/path/to/csv/dump.txt' WITH (FORMAT csv);</code>: Restore dump file</li>
-<li><code>SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE usename ='francois.ducatillon';</code>: Track user activity</li>
+<li><code>COPY table_name FROM \'/path/to/csv/dump.txt\' WITH (FORMAT csv);</code>: Insert data from csv file into a table (No header needed in the text file)</li>
+<li><code>SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE usename ='john.doe';</code>: Track user activity</li>
+<li><code>SELECT pg_sequence_last_value('sequence_name')</code>: Show sequence last value</li>
+<li><code>SELECT nextval('sequence_name')</code>: Show sequence next value</li>
+<li><code>SELECT * from information_schema.sequences WHERE sequence_name='sequence_name'</code>: Show sequence details</li>
 </ul>
 <h2 id="mysql-commands">
   Mysql commands

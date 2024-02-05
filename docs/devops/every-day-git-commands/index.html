@@ -25,7 +25,7 @@ git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.c57387979875eda56795e26a24eb84eef6fbaf2a9b13f1910eca14c6e3da4194.css" integrity="sha256-xXOHl5h17aVnleJqJOuE7vb7ryqbE/GRDsoUxuPaQZQ=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.befa5bd45d24a23887931c55a22ebd2af8cbf0b4851eb520b9a236cd375c6c60.js" integrity="sha256-vvpb1F0kojiHkxxVoi69KvjL8LSFHrUguaI2zTdcbGA=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.9a88369b7d3cf25c4e84b05969b98fa095cfc7a4731b4f567bdf923848dbe5b1.js" integrity="sha256-mog2m3088lxOhLBZabmPoJXPx6RzG09We9&#43;SOEjb5bE=" crossorigin="anonymous"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
 <script>
@@ -361,6 +361,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#remove-a-remote-file">Remove a remote file</a></li>
         <li><a href="#shortcut-add--commit-all-files">Shortcut add &amp; commit all files</a></li>
         <li><a href="#show-git-history">Show git history</a></li>
+        <li><a href="#changing-old-commit-messages">Changing old commit messages</a></li>
       </ul>
     </li>
   </ul>
@@ -443,6 +444,37 @@ git commit -m &#34;commit message&#34;
 </h3>
 <p>using pretty format</p>
 <pre tabindex="0"><code>git log --pretty=format:&#34;%h - %an, %ar : %s&#34;
+</code></pre><h3 id="changing-old-commit-messages">
+  Changing old commit messages
+  <a class="anchor" href="#changing-old-commit-messages">#</a>
+</h3>
+<pre tabindex="0"><code>git rebase -i HEAD~3 
+</code></pre><p>Then this prompt pops up</p>
+<pre tabindex="0"><code>pick f45c433 update readme 
+pick e023d22 edit README
+pick c245d34 init readme
+
+# Rebase 9fdb3bd..f7fde4a onto 9fdb3bd
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like &#34;squash&#34;, but discard this commit&#39;s log message
+# x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re- ordered; they are executed from top to
+bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+</code></pre><p>Then replace <code>pick</code> with <code>reword</code>. Save and close.</p>
+<p>Finih with git push force:</p>
+<pre tabindex="0"><code>git push --force
 </code></pre></article>
  
       
@@ -499,6 +531,7 @@ git commit -m &#34;commit message&#34;
         <li><a href="#remove-a-remote-file">Remove a remote file</a></li>
         <li><a href="#shortcut-add--commit-all-files">Shortcut add &amp; commit all files</a></li>
         <li><a href="#show-git-history">Show git history</a></li>
+        <li><a href="#changing-old-commit-messages">Changing old commit messages</a></li>
       </ul>
     </li>
   </ul>

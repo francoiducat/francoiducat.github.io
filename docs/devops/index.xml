@@ -5,37 +5,28 @@
     <link>https://francoiducat.github.io/docs/devops/</link>
     <description>Recent content on FDUCAT Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://francoiducat.github.io/docs/devops/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://francoiducat.github.io/docs/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/</guid>
       <description>Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&amp;rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&amp;rsquo;utilisateur (la &amp;ldquo;home directory&amp;rdquo; de l&amp;rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/devops/day-to-day-kubernetes-command/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/devops/day-to-day-kubernetes-command/</guid>
       <description> Kubernetes &amp;amp; Docker commands for developers # Export pod logs # kubectl logs pod-name -n namespace-name &amp;gt;&amp;gt; /export/path/file.txt Use bach inside a pod # kubectl exec -it myPod -n myNameSpace -- /bin/bash Run container # docker run -p 8080:80 --name=nginx Run specific docker service # docker-compose up -d myDatabaseApp </description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/devops/every-day-git-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/devops/every-day-git-commands/</guid>
-      <description>Every day Git commands for developers # Here are some day to day useful git commands
-Refresh git repo after .gitignore edition # When you add a new file to the .gitignore it is not immediatly ignored. It stills appears on git status
-To refresh the git repo
-git rm -rf --cached . or
-git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard changes on a file # git checkout fileYouDiscardChanges Show all remotes # This show origin and upstream remotes</description>
+      <description>Every day Git commands for developers # Here are some day to day useful git commands&#xA;Refresh git repo after .gitignore edition # When you add a new file to the .gitignore it is not immediatly ignored. It stills appears on git status&#xA;To refresh the git repo&#xA;git rm -rf --cached . or&#xA;git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard changes on a file # git checkout fileYouDiscardChanges Show all remotes # This show origin and upstream remotes</description>
     </item>
-    
   </channel>
 </rss>

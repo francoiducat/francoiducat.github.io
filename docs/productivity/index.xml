@@ -5,40 +5,28 @@
     <link>https://francoiducat.github.io/docs/productivity/</link>
     <description>Recent content on FDUCAT Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://francoiducat.github.io/docs/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://francoiducat.github.io/docs/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</guid>
-      <description>Google spreadsheet tricks # Remove characters from a string in a cell with Google spreadsheet # Goal # Remove the first 2 characters from a string in cell D1 :
-=RIGHT(D1,LEN(D1)-2) Explanations # LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return. Alternatively, to remove the last 2 characters, use :</description>
+      <description>Google spreadsheet tricks # Remove characters from a string in a cell with Google spreadsheet # Goal # Remove the first 2 characters from a string in cell D1 :&#xA;=RIGHT(D1,LEN(D1)-2) Explanations # LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return. Alternatively, to remove the last 2 characters, use :</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</guid>
-      <description> Mac OS Screen record with audio for free # This video explains very clearly how to record your screen with audio on mac os for free.
-Without audio just use quicktime:
-Sources # https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device </description>
+      <description> Mac OS Screen record with audio for free # This video explains very clearly how to record your screen with audio on mac os for free.&#xA;Without audio just use quicktime:&#xA;Sources # https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device </description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/productivity/save-storage-pdf-images-videos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/productivity/save-storage-pdf-images-videos/</guid>
-      <description>Compress PDF offline # I found this great tool to compress pdf (python script) from the command line.
-Requirements # Python # Check your python version
-➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version
-➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) Setup # Add this command in your .bash_profile or .zshrc file
-# Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&amp;#34;screen&amp;#34;} -dCompatibilityLevel=1.</description>
+      <description>Compress PDF offline # I found this great tool to compress pdf (python script) from the command line.&#xA;Requirements # Python # Check your python version&#xA;➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version&#xA;➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) Setup # Add this command in your .bash_profile or .zshrc file&#xA;# Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&amp;#34;screen&amp;#34;} -dCompatibilityLevel=1.</description>
     </item>
-    
   </channel>
 </rss>

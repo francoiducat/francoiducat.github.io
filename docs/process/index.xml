@@ -5,18 +5,14 @@
     <link>https://francoiducat.github.io/docs/process/</link>
     <description>Recent content on FDUCAT Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://francoiducat.github.io/docs/process/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://francoiducat.github.io/docs/process/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/</guid>
-      <description>The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash
-Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.
-Let&amp;rsquo;s get straight to the point.
-What are Code Reviews?</description>
+      <description>The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash&#xA;Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.&#xA;Let&amp;rsquo;s get straight to the point.&#xA;What are Code Reviews?</description>
     </item>
-    
   </channel>
 </rss>

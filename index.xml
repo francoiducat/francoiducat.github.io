@@ -5,128 +5,84 @@
     <link>https://francoiducat.github.io/</link>
     <description>Recent content in Introduction on FDUCAT Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://francoiducat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://francoiducat.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notions de bases en réseau</title>
       <link>https://francoiducat.github.io/posts/notions-reseau/</link>
       <pubDate>Tue, 11 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/posts/notions-reseau/</guid>
-      <description>Notions de bases en réseau # Réseau (informatique) # Ensemble d&amp;rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:
-Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc. Cables réseau ou cable ethernet: # UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux Carte réseau # Matériel qui permet d&amp;rsquo;accéder au réseau.</description>
+      <description>Notions de bases en réseau # Réseau (informatique) # Ensemble d&amp;rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:&#xA;Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc. Cables réseau ou cable ethernet: # UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux Carte réseau # Matériel qui permet d&amp;rsquo;accéder au réseau.</description>
     </item>
-    
     <item>
       <title>Charger ses propres fichiers .css et .js dans Wordpress</title>
       <link>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</link>
       <pubDate>Thu, 02 Dec 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</guid>
-      <description>Charger ses propres fichiers .css et .js dans Wordpress # Objectif # Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.
-Solution # Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &amp;lt;head&amp;gt; de notre page HTML.
-Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes
-_wp_enqueue_script_ _wp_enqueue_style_ du fichier function.php.</description>
+      <description>Charger ses propres fichiers .css et .js dans Wordpress # Objectif # Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.&#xA;Solution # Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &amp;lt;head&amp;gt; de notre page HTML.&#xA;Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes&#xA;_wp_enqueue_script_ _wp_enqueue_style_ du fichier function.php.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/</guid>
       <description>Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&amp;rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&amp;rsquo;utilisateur (la &amp;ldquo;home directory&amp;rdquo; de l&amp;rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/devops/day-to-day-kubernetes-command/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/devops/day-to-day-kubernetes-command/</guid>
       <description> Kubernetes &amp;amp; Docker commands for developers # Export pod logs # kubectl logs pod-name -n namespace-name &amp;gt;&amp;gt; /export/path/file.txt Use bach inside a pod # kubectl exec -it myPod -n myNameSpace -- /bin/bash Run container # docker run -p 8080:80 --name=nginx Run specific docker service # docker-compose up -d myDatabaseApp </description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/devops/every-day-git-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/devops/every-day-git-commands/</guid>
-      <description>Every day Git commands for developers # Here are some day to day useful git commands
-Refresh git repo after .gitignore edition # When you add a new file to the .gitignore it is not immediatly ignored. It stills appears on git status
-To refresh the git repo
-git rm -rf --cached . or
-git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard changes on a file # git checkout fileYouDiscardChanges Show all remotes # This show origin and upstream remotes</description>
+      <description>Every day Git commands for developers # Here are some day to day useful git commands&#xA;Refresh git repo after .gitignore edition # When you add a new file to the .gitignore it is not immediatly ignored. It stills appears on git status&#xA;To refresh the git repo&#xA;git rm -rf --cached . or&#xA;git rm -rf --cached specifyOnlyTheFolderToResfreshInsteadOftheEntireRepo Discard changes on a file # git checkout fileYouDiscardChanges Show all remotes # This show origin and upstream remotes</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/java/springboot-graphql-client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/java/springboot-graphql-client/</guid>
-      <description>Minimal Graphql client request with Springboot # https://unsplash.com/license Photo from Farzad Nazifi under Unsplash Licence
-Introduction # Most API’s architectural styles are RESTful. For some good reasons, APIs can also be built based on a Graphql architecture style. I recently had the opportunity to call one of them. I discovered and tried several ways to perform this Graphql request, all with pros and cons. In this article, I will describe how to perform a minimal Graphql client request with Spring Boot and WebClient.</description>
+      <description>Minimal Graphql client request with Springboot # https://unsplash.com/license Photo from Farzad Nazifi under Unsplash Licence&#xA;Introduction # Most API’s architectural styles are RESTful. For some good reasons, APIs can also be built based on a Graphql architecture style. I recently had the opportunity to call one of them. I discovered and tried several ways to perform this Graphql request, all with pros and cons. In this article, I will describe how to perform a minimal Graphql client request with Spring Boot and WebClient.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/</guid>
-      <description>The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash
-Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.
-Let&amp;rsquo;s get straight to the point.
-What are Code Reviews?</description>
+      <description>The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash&#xA;Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.&#xA;Let&amp;rsquo;s get straight to the point.&#xA;What are Code Reviews?</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/productivity/google-spreadsheet-tricks/</guid>
-      <description>Google spreadsheet tricks # Remove characters from a string in a cell with Google spreadsheet # Goal # Remove the first 2 characters from a string in cell D1 :
-=RIGHT(D1,LEN(D1)-2) Explanations # LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return. Alternatively, to remove the last 2 characters, use :</description>
+      <description>Google spreadsheet tricks # Remove characters from a string in a cell with Google spreadsheet # Goal # Remove the first 2 characters from a string in cell D1 :&#xA;=RIGHT(D1,LEN(D1)-2) Explanations # LEN(D1) returns the length of the string in a cell. RIGHT(D1, X) returns a substring from the end. First argument is the string. Seconde argument is the length of the substring to return. Alternatively, to remove the last 2 characters, use :</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/productivity/mac-screen-record-with-audio/</guid>
-      <description> Mac OS Screen record with audio for free # This video explains very clearly how to record your screen with audio on mac os for free.
-Without audio just use quicktime:
-Sources # https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device </description>
+      <description> Mac OS Screen record with audio for free # This video explains very clearly how to record your screen with audio on mac os for free.&#xA;Without audio just use quicktime:&#xA;Sources # https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device </description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/productivity/save-storage-pdf-images-videos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/productivity/save-storage-pdf-images-videos/</guid>
-      <description>Compress PDF offline # I found this great tool to compress pdf (python script) from the command line.
-Requirements # Python # Check your python version
-➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version
-➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) Setup # Add this command in your .bash_profile or .zshrc file
-# Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&amp;#34;screen&amp;#34;} -dCompatibilityLevel=1.</description>
+      <description>Compress PDF offline # I found this great tool to compress pdf (python script) from the command line.&#xA;Requirements # Python # Check your python version&#xA;➜ ~ python --version Python 3.8.9 Ghoscript # Check your ghoscript version&#xA;➜ ~ gs GPL Ghostscript 10.0.0 (2022-09-21) Setup # Add this command in your .bash_profile or .zshrc file&#xA;# Usage: spdf [input file] [output file] [screen*|ebook|printer|prepress] spdf() { gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-&amp;#34;screen&amp;#34;} -dCompatibilityLevel=1.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://francoiducat.github.io/docs/web/embed-pdf-in-html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/docs/web/embed-pdf-in-html/</guid>
-      <description>Afficher un pdf dans une page HTML # Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.
-Vous pouvez par exemple utiliser les services de scribd.com ou tout simplement insérer le code HTML suivant dans votre page :
-Avec la balise embed (/!\ non compatible sur naviguateurs mobiles)
-&amp;lt;embed src=&amp;#34;https://yoursite.com/yourdocument.pdf&amp;#34; width=&amp;#34;100%&amp;#34; height=&amp;#34;400p&amp;#34;&amp;gt; ou avec la balise iframe qui est compatible sur naviguateur mobile.
-&amp;lt;iframe src=&amp;#34;https://docs.google.com/viewer?url=https://yoursite.com/pdf/yourdocument.pdf&amp;amp;embedded=true&amp;#34; style=&amp;#34;width:100%; height:500px;&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt; Voici le résultat :</description>
+      <description>Afficher un pdf dans une page HTML # Pour afficher un document pdf dans une page HTML, plusieurs solutions existent.&#xA;Vous pouvez par exemple utiliser les services de scribd.com ou tout simplement insérer le code HTML suivant dans votre page :&#xA;Avec la balise embed (/!\ non compatible sur naviguateurs mobiles)&#xA;&amp;lt;embed src=&amp;#34;https://yoursite.com/yourdocument.pdf&amp;#34; width=&amp;#34;100%&amp;#34; height=&amp;#34;400p&amp;#34;&amp;gt; ou avec la balise iframe qui est compatible sur naviguateur mobile.&#xA;&amp;lt;iframe src=&amp;#34;https://docs.google.com/viewer?url=https://yoursite.com/pdf/yourdocument.pdf&amp;amp;embedded=true&amp;#34; style=&amp;#34;width:100%; height:500px;&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt; Voici le résultat :</description>
     </item>
-    
   </channel>
 </rss>

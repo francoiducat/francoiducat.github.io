@@ -6,18 +6,14 @@
     <description>Recent content in jquery on FDUCAT Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Dec 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://francoiducat.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 18:31:15 +0200</lastBuildDate>
+    <atom:link href="https://francoiducat.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Charger ses propres fichiers .css et .js dans Wordpress</title>
       <link>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</link>
       <pubDate>Thu, 02 Dec 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</guid>
-      <description>Charger ses propres fichiers .css et .js dans Wordpress # Objectif # Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.
-Solution # Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &amp;lt;head&amp;gt; de notre page HTML.
-Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes
-_wp_enqueue_script_ _wp_enqueue_style_ du fichier function.php.</description>
+      <description>Charger ses propres fichiers .css et .js dans Wordpress # Objectif # Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.&#xA;Solution # Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &amp;lt;head&amp;gt; de notre page HTML.&#xA;Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes&#xA;_wp_enqueue_script_ _wp_enqueue_style_ du fichier function.php.</description>
     </item>
-    
   </channel>
 </rss>

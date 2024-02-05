@@ -13,6 +13,7 @@ Introduction # Most API’s architectural styles are RESTful. For some good reas
 <meta property="og:url" content="https://francoiducat.github.io/docs/java/springboot-graphql-client/" /><meta property="article:section" content="docs" />
 
 <meta property="article:modified_time" content="2022-10-15T17:00:25+02:00" />
+
 <title>Springboot Graphql Client | FDUCAT Notebook</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -470,13 +471,13 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#22-graphql-query">#</a>
 </h5>
 <p>Let’s now create a <code>getCountryDetails.graphql</code> file in the resources folder of the project.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>query<span style="color:#f92672">(</span>$code<span style="color:#f92672">:</span> ID<span style="color:#f92672">!)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span> country<span style="color:#f92672">(</span>code<span style="color:#f92672">:</span> $code<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>query($code: ID<span style="color:#f92672">!</span>) {
+</span></span><span style="display:flex;"><span> country(code: $code) {
 </span></span><span style="display:flex;"><span>   name
 </span></span><span style="display:flex;"><span>   capital
 </span></span><span style="display:flex;"><span>   currency
-</span></span><span style="display:flex;"><span> <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h5 id="23-graphql-variables">
   2.3 Graphql Variables
   <a class="anchor" href="#23-graphql-variables">#</a>
@@ -496,80 +497,80 @@ https://github.com/alex-shpak/hugo-book
 </h4>
 <p>I create my <code>CountryDto</code> Object :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountryDto</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountryDto</span> {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> CountryData data<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> CountryData data;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Getter</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountryData</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountryData</span> {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Country country<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Country country;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Getter</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Country</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Country</span> {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">private</span> String capital<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">private</span> String currency<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">private</span> String name;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">private</span> String capital;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">private</span> String currency;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Eventually, let’s create the <code>CountryClient</code> class 😀.</p>
 <p>I said it was a minimal Graphql client request, didn’t I?</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountryClient</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountryClient</span> {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String url<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String url;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CountryClient</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;https://countries.trevorblades.com/&#34;</span><span style="color:#f92672">)</span> String url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> url<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CountryClient</span>(<span style="color:#a6e22e">@Value</span>(<span style="color:#e6db74">&#34;https://countries.trevorblades.com/&#34;</span>) String url) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> url;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> CountryDto <span style="color:#a6e22e">getCountryDetails</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String countryCode<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> CountryDto <span style="color:#a6e22e">getCountryDetails</span>(<span style="color:#66d9ef">final</span> String countryCode) <span style="color:#66d9ef">throws</span> IOException {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    WebClient webClient <span style="color:#f92672">=</span> WebClient<span style="color:#f92672">.</span><span style="color:#a6e22e">builder</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    WebClient webClient <span style="color:#f92672">=</span> WebClient.<span style="color:#a6e22e">builder</span>().<span style="color:#a6e22e">build</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    GraphqlRequestBody graphQLRequestBody <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> GraphqlRequestBody<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    GraphqlRequestBody graphQLRequestBody <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> GraphqlRequestBody();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String query <span style="color:#f92672">=</span> GraphqlSchemaReaderUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">getSchemaFromFileName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;getCountryDetails&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String variables <span style="color:#f92672">=</span> GraphqlSchemaReaderUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">getSchemaFromFileName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;variables&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String query <span style="color:#f92672">=</span> GraphqlSchemaReaderUtil.<span style="color:#a6e22e">getSchemaFromFileName</span>(<span style="color:#e6db74">&#34;getCountryDetails&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String variables <span style="color:#f92672">=</span> GraphqlSchemaReaderUtil.<span style="color:#a6e22e">getSchemaFromFileName</span>(<span style="color:#e6db74">&#34;variables&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    graphQLRequestBody<span style="color:#f92672">.</span><span style="color:#a6e22e">setQuery</span><span style="color:#f92672">(</span>query<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    graphQLRequestBody<span style="color:#f92672">.</span><span style="color:#a6e22e">setVariables</span><span style="color:#f92672">(</span>variables<span style="color:#f92672">.</span><span style="color:#a6e22e">replace</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;countryCode&#34;</span><span style="color:#f92672">,</span> countryCode<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>    graphQLRequestBody.<span style="color:#a6e22e">setQuery</span>(query);
+</span></span><span style="display:flex;"><span>    graphQLRequestBody.<span style="color:#a6e22e">setVariables</span>(variables.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;countryCode&#34;</span>, countryCode));
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> webClient<span style="color:#f92672">.</span><span style="color:#a6e22e">post</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">uri</span><span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">bodyValue</span><span style="color:#f92672">(</span>graphQLRequestBody<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">retrieve</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">bodyToMono</span><span style="color:#f92672">(</span>CountryDto<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">block</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> webClient.<span style="color:#a6e22e">post</span>()
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">uri</span>(url)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">bodyValue</span>(graphQLRequestBody)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">retrieve</span>()
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">bodyToMono</span>(CountryDto.<span style="color:#a6e22e">class</span>)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">block</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><code>GraphqlSchemaReaderUtil</code> class to read Graphql files stored in the resource folder:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GraphqlSchemaReaderUtil</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GraphqlSchemaReaderUtil</span> {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">getSchemaFromFileName</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String filename<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>        GraphqlSchemaReaderUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClassLoader</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;graphql/&#34;</span> <span style="color:#f92672">+</span> filename <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.graphql&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">readAllBytes</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">getSchemaFromFileName</span>(<span style="color:#66d9ef">final</span> String filename) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String(
+</span></span><span style="display:flex;"><span>        GraphqlSchemaReaderUtil.<span style="color:#a6e22e">class</span>.<span style="color:#a6e22e">getClassLoader</span>().<span style="color:#a6e22e">getResourceAsStream</span>(<span style="color:#e6db74">&#34;graphql/&#34;</span> <span style="color:#f92672">+</span> filename <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.graphql&#34;</span>).<span style="color:#a6e22e">readAllBytes</span>());
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Let’s just log the Graphql response in the <strong>main</strong> method of our Spring Boot App:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootApplication</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GraphqlClientApplication</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GraphqlClientApplication</span> {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    ConfigurableApplicationContext context <span style="color:#f92672">=</span> SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>GraphqlClientApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    CountryClient client <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>CountryClient<span style="color:#f92672">)</span> context<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;countryClient&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    ObjectWriter ow <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectMapper<span style="color:#f92672">().</span><span style="color:#a6e22e">writer</span><span style="color:#f92672">().</span><span style="color:#a6e22e">withDefaultPrettyPrinter</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    CountryDto countryDto <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span><span style="color:#a6e22e">getCountryDetails</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;BE&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span>ow<span style="color:#f92672">.</span><span style="color:#a6e22e">writeValueAsString</span><span style="color:#f92672">(</span>countryDto<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>    ConfigurableApplicationContext context <span style="color:#f92672">=</span> SpringApplication.<span style="color:#a6e22e">run</span>(GraphqlClientApplication.<span style="color:#a6e22e">class</span>, args);
+</span></span><span style="display:flex;"><span>    CountryClient client <span style="color:#f92672">=</span> (CountryClient) context.<span style="color:#a6e22e">getBean</span>(<span style="color:#e6db74">&#34;countryClient&#34;</span>);
+</span></span><span style="display:flex;"><span>    ObjectWriter ow <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectMapper().<span style="color:#a6e22e">writer</span>().<span style="color:#a6e22e">withDefaultPrettyPrinter</span>();
+</span></span><span style="display:flex;"><span>    CountryDto countryDto <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">getCountryDetails</span>(<span style="color:#e6db74">&#34;BE&#34;</span>);
+</span></span><span style="display:flex;"><span>    log.<span style="color:#a6e22e">info</span>(ow.<span style="color:#a6e22e">writeValueAsString</span>(countryDto));
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Now, your console should log the response like this:</p>
 <p><img src="https://miro.medium.com/max/700/1*sGRH647O6BKgkHBkGEpYYA.png" alt="Graphql-response" /></p>
 <h2 id="unit-test">

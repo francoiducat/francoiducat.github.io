@@ -4,30 +4,35 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://francoiducat.github.io/docs/web/" />
-
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://francoiducat.github.io/docs/web/">
+  <meta property="og:site_name" content="FDUCAT Notebook">
+  <meta property="og:title" content="FDUCAT Notebook">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
 <title>Web | FDUCAT Notebook</title>
+<link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c57387979875eda56795e26a24eb84eef6fbaf2a9b13f1910eca14c6e3da4194.css" integrity="sha256-xXOHl5h17aVnleJqJOuE7vb7ryqbE/GRDsoUxuPaQZQ=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.9a88369b7d3cf25c4e84b05969b98fa095cfc7a4731b4f567bdf923848dbe5b1.js" integrity="sha256-mog2m3088lxOhLBZabmPoJXPx6RzG09We9&#43;SOEjb5bE=" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://francoiducat.github.io/docs/web/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.e7cc925b4ee4af3ac2063a966dcf2e4169949d3773db84e8507af76187605f18.js" integrity="sha256-58ySW07krzrCBjqWbc8uQWmUnTdz24ToUHr3YYdgXxg=" crossorigin="anonymous"></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-PXY5L88X6W', { 'anonymize_ip': false });
-}
-</script>
-<link rel="alternate" type="application/rss+xml" href="https://francoiducat.github.io/docs/web/index.xml" title="FDUCAT Notebook" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PXY5L88X6W');
+        }
+      </script><link rel="alternate" type="application/rss+xml" href="https://francoiducat.github.io/docs/web/index.xml" title="FDUCAT Notebook" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -48,11 +53,12 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -65,7 +71,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
 
 
 
@@ -290,7 +295,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
   
 <ul>
   
@@ -327,7 +331,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Web</strong>
+  <h3>Web</h3>
 
   <label for="toc-control">
     
@@ -352,7 +356,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown book-article"></article>
  
       
 
@@ -362,7 +366,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/53d3aa044d9d34d9ff813bc8bce01fa0f4ac0ec6" title='Last modified by francoiducat | Sep 25, 2021' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <img src="/svg/calendar.svg" class="book-icon" alt="" />
       <span>Sep 25, 2021</span>
     </a>
   </div>

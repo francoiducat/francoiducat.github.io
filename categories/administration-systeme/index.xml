@@ -4,7 +4,7 @@
     <title>Administration Systeme on FDUCAT Notebook</title>
     <link>https://francoiducat.github.io/categories/administration-systeme/</link>
     <description>Recent content in Administration Systeme on FDUCAT Notebook</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Sep 2021 18:31:15 +0200</lastBuildDate>
     <atom:link href="https://francoiducat.github.io/categories/administration-systeme/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://francoiducat.github.io/posts/notions-reseau/</link>
       <pubDate>Tue, 11 Jan 2011 00:00:00 +0000</pubDate>
       <guid>https://francoiducat.github.io/posts/notions-reseau/</guid>
-      <description>Notions de bases en réseau # Réseau (informatique) # Ensemble d&amp;rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:&#xA;Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.) Echanger des données: documents, tchats etc. Cables réseau ou cable ethernet: # UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde cables ethernet droits: relie un ordinateur à un switch cables ethernet croisés: relie 2 ordinateurs entre eux Carte réseau # Matériel qui permet d&amp;rsquo;accéder au réseau.</description>
+      <description>&lt;h1 id=&#34;notions-de-bases-en-réseau&#34;&gt;&#xA;  Notions de bases en réseau&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#notions-de-bases-en-r%c3%a9seau&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;réseau-informatique&#34;&gt;&#xA;  Réseau (informatique)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#r%c3%a9seau-informatique&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Ensemble d&amp;rsquo;ordinateurs reliés entre eux (cables ou sans fil). Ces ordinateurs peuvent ainsi à distance:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Partager des ressources (modem, disque dur, lecteur de CD-Rom, applications etc.)&lt;/li&gt;&#xA;&lt;li&gt;Echanger des données: documents, tchats etc.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;cables-réseau-ou-cable-ethernet&#34;&gt;&#xA;  Cables réseau ou cable ethernet:&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cables-r%c3%a9seau-ou-cable-ethernet&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;UTP-CAT5 (Unshielded Twist Pair Category 5) :100mégabit/seconde&lt;/li&gt;&#xA;&lt;li&gt;UTP-CAT6 (Unshielded Twist Pair Category 6): 1gigabit/seconde&lt;/li&gt;&#xA;&lt;li&gt;cables ethernet droits: relie un ordinateur à un switch&lt;/li&gt;&#xA;&lt;li&gt;cables ethernet croisés: relie 2 ordinateurs entre eux&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;carte-réseau&#34;&gt;&#xA;  Carte réseau&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#carte-r%c3%a9seau&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Matériel qui permet d&amp;rsquo;accéder au réseau. C&amp;rsquo;est par là que les données transites. La carte réseau fourni une adresse MAC à l&amp;rsquo;ordinateur en question afin de l&amp;rsquo;identifier sur le réseau (adresse physique). Une carte réseau se fixe au port PCI de l&amp;rsquo;ordinateur.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

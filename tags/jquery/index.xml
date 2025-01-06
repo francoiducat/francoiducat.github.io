@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jquery on FDUCAT Notebook</title>
+    <title>Jquery on FDUCAT Notebook</title>
     <link>https://francoiducat.github.io/tags/jquery/</link>
-    <description>Recent content in jquery on FDUCAT Notebook</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Jquery on FDUCAT Notebook</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Sep 2021 18:31:15 +0200</lastBuildDate>
     <atom:link href="https://francoiducat.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</link>
       <pubDate>Thu, 02 Dec 2010 00:00:00 +0000</pubDate>
       <guid>https://francoiducat.github.io/posts/charger-ses-propres-fichiers-css-dans-wordpress/</guid>
-      <description>Charger ses propres fichiers .css et .js dans Wordpress # Objectif # Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.&#xA;Solution # Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &amp;lt;head&amp;gt; de notre page HTML.&#xA;Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes&#xA;_wp_enqueue_script_ _wp_enqueue_style_ du fichier function.php.</description>
+      <description>&lt;h1 id=&#34;charger-ses-propres-fichiers-css-et-js-dans-wordpress&#34;&gt;&#xA;  Charger ses propres fichiers .css et .js dans Wordpress&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#charger-ses-propres-fichiers-css-et-js-dans-wordpress&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;objectif&#34;&gt;&#xA;  Objectif&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#objectif&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Charger un ou plusieurs fichiers .js et/ou .css afin de créer une animation ou ajouter un effet de style.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;&#xA;  Solution&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Sur un site &amp;ldquo;non wordpress&amp;rdquo; on pourrait inclure nos scripts entre les balises &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; de notre page HTML.&lt;/p&gt;&#xA;&lt;p&gt;Avec WordPress (3.X.X et 4.X.X) une des solutions possible est d&amp;rsquo;utiliser les méthodes&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;_wp_enqueue_script_&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;_wp_enqueue_style_&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;du fichier &lt;code&gt;function.php&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>FDUCAT Notebook</title>
     <link>https://francoiducat.github.io/docs/process/</link>
     <description>Recent content on FDUCAT Notebook</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://francoiducat.github.io/docs/process/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://francoiducat.github.io/docs/process/the-virtuous-cycle-of-code-review/</guid>
-      <description>The virtuous cycle of Code Reviews # https://unsplash.com/license Photo by Alvaro Reyes on Unsplash&#xA;Introduction # Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to people, products and organisations.&#xA;Let&amp;rsquo;s get straight to the point.&#xA;What are Code Reviews?</description>
+      <description>&lt;h1 id=&#34;the-virtuous-cycle-of-code-reviews&#34;&gt;&#xA;  The virtuous cycle of Code Reviews&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#the-virtuous-cycle-of-code-reviews&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://francoiducat.github.io/img/code-review.jpeg&#34; alt=&#34;Photo by Alvaro Reyes on Unsplash&#34; /&gt;&#xA;&lt;em&gt;&lt;a href=&#34;https://unsplash.com/license&#34;&gt;https://unsplash.com/license&lt;/a&gt; Photo by Alvaro Reyes on Unsplash&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#introduction&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Yet another article dealing with Code Reviews. Indeed it is. But I really believe this is worth it! I have little experience as a developer within Agile teams but enough to be convinced how much benefits and serenity it brings to &lt;strong&gt;people&lt;/strong&gt;, &lt;strong&gt;products&lt;/strong&gt; and &lt;strong&gt;organisations&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

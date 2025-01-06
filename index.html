@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.122.0">
+	<meta name="generator" content="Hugo 0.140.2">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FDUCAT Notebook # Static Website built with Hugo and book theme, hosted on github pages.
+<meta name="description" content="
+  FDUCAT Notebook
+  #
+
+Static Website built with Hugo and book theme, hosted on github pages.
+
+
+
+
+  Java
+  #
+
+Java App Sandbox with working examples.
+  
+
+
+  Springboot
+  #
+
+Spring Boot apps playground repos.
+  
+
+
+  DevOps
+  #
+
+Day to day swiss army knife terminal commands.
+  
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://francoiducat.github.io/">
+  <meta property="og:site_name" content="FDUCAT Notebook">
+  <meta property="og:title" content="Introduction">
+  <meta property="og:description" content="FDUCAT Notebook # Static Website built with Hugo and book theme, hosted on github pages.
 Java # Java App Sandbox with working examples.
 Springboot # Spring Boot apps playground repos.
 DevOps # Day to day swiss army knife terminal commands.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Introduction" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://francoiducat.github.io/" />
-
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
 <title>Introduction | FDUCAT Notebook</title>
+<link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c57387979875eda56795e26a24eb84eef6fbaf2a9b13f1910eca14c6e3da4194.css" integrity="sha256-xXOHl5h17aVnleJqJOuE7vb7ryqbE/GRDsoUxuPaQZQ=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.9a88369b7d3cf25c4e84b05969b98fa095cfc7a4731b4f567bdf923848dbe5b1.js" integrity="sha256-mog2m3088lxOhLBZabmPoJXPx6RzG09We9&#43;SOEjb5bE=" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://francoiducat.github.io/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.e7cc925b4ee4af3ac2063a966dcf2e4169949d3773db84e8507af76187605f18.js" integrity="sha256-58ySW07krzrCBjqWbc8uQWmUnTdz24ToUHr3YYdgXxg=" crossorigin="anonymous"></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-PXY5L88X6W', { 'anonymize_ip': false });
-}
-</script>
-<link rel="alternate" type="application/rss+xml" href="https://francoiducat.github.io/index.xml" title="FDUCAT Notebook" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PXY5L88X6W');
+        }
+      </script><link rel="alternate" type="application/rss+xml" href="https://francoiducat.github.io/index.xml" title="FDUCAT Notebook" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -52,11 +86,12 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -69,7 +104,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
 
 
 
@@ -294,7 +328,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
   
 <ul>
   
@@ -331,7 +364,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Introduction</strong>
+  <h3>Introduction</h3>
 
   <label for="toc-control">
     
@@ -345,7 +378,13 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#springboot">Springboot</a></li>
+    <li><a href="#devops">DevOps</a></li>
+  </ul>
+</nav>
 
 
 
@@ -356,40 +395,35 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="fducat-notebook">
+  <article class="markdown book-article"><h1 id="fducat-notebook">
   FDUCAT Notebook
   <a class="anchor" href="#fducat-notebook">#</a>
 </h1>
 <p>Static Website built with <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/alex-shpak/hugo-book">book theme</a>, hosted on <a href="https://pages.github.com/">github pages</a>.</p>
 <p><img src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" alt="Hugo Logo" /></p>
 <div class="book-columns flex flex-wrap">
-
-  <div class="flex-even markdown-inner">
-    <h2 id="java">
+<div class="flex-even markdown-inner" style="flex-grow: 1;">
+<h2 id="java">
   Java
   <a class="anchor" href="#java">#</a>
 </h2>
 <p>Java App Sandbox with <a href="https://github.com/francoiducat/JavaAppSandBox">working examples</a>.</p>
   </div>
-
-  <div class="flex-even markdown-inner">
-    <h2 id="springboot">
+<div class="flex-even markdown-inner" style="flex-grow: 1;">
+<h2 id="springboot">
   Springboot
   <a class="anchor" href="#springboot">#</a>
 </h2>
 <p>Spring Boot apps playground <a href="https://github.com/francoiducat?tab=repositories&amp;q=spring&amp;type=&amp;language=&amp;sort=">repos</a>.</p>
   </div>
-
-  <div class="flex-even markdown-inner">
-    <h2 id="devops">
+<div class="flex-even markdown-inner" style="flex-grow: 1;">
+<h2 id="devops">
   DevOps
   <a class="anchor" href="#devops">#</a>
 </h2>
 <p>Day to day swiss army knife <a href="https://notes.ducatillon.net/docs/devops/day-to-day-bash-commands/">terminal commands</a>.</p>
   </div>
-
 </div>
-
 </article>
  
       
@@ -400,7 +434,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/2c8ca5677ac10b5ebe1a627559c787502b360b60" title='Last modified by francoiducat | Jul 8, 2023' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <img src="/svg/calendar.svg" class="book-icon" alt="" />
       <span>Jul 8, 2023</span>
     </a>
   </div>
@@ -435,7 +469,13 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#springboot">Springboot</a></li>
+    <li><a href="#devops">DevOps</a></li>
+  </ul>
+</nav>
 
 
  

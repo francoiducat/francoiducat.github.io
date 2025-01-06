@@ -4,7 +4,7 @@
     <title>FDUCAT Notebook</title>
     <link>https://francoiducat.github.io/docs/java/</link>
     <description>Recent content on FDUCAT Notebook</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://francoiducat.github.io/docs/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://francoiducat.github.io/docs/java/springboot-graphql-client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://francoiducat.github.io/docs/java/springboot-graphql-client/</guid>
-      <description>Minimal Graphql client request with Springboot # https://unsplash.com/license Photo from Farzad Nazifi under Unsplash Licence&#xA;Introduction # Most API’s architectural styles are RESTful. For some good reasons, APIs can also be built based on a Graphql architecture style. I recently had the opportunity to call one of them. I discovered and tried several ways to perform this Graphql request, all with pros and cons. In this article, I will describe how to perform a minimal Graphql client request with Spring Boot and WebClient.</description>
+      <description>&lt;h1 id=&#34;minimal-graphql-client-request-with-springboot&#34;&gt;&#xA;  Minimal Graphql client request with Springboot&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#minimal-graphql-client-request-with-springboot&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miro.medium.com/max/1280/1*eyC_K8xUyRHqlIaIbghHyg.jpeg&#34; alt=&#34;Photo from Farzad Nazifi under Unsplash Licence&#34; /&gt;&#xA;&lt;em&gt;&lt;a href=&#34;https://unsplash.com/license&#34;&gt;https://unsplash.com/license&lt;/a&gt; Photo from Farzad Nazifi under Unsplash Licence&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#introduction&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Most API’s architectural styles are RESTful. &lt;a href=&#34;https://www.javatpoint.com/graphql-advantages-and-disadvantages&#34;&gt;For some good reasons&lt;/a&gt;, APIs can also be built based on a Graphql architecture style. I recently had the opportunity to call one of them. I discovered and tried several ways to perform this Graphql request, all with pros and cons. In this article, I will describe how to perform a &lt;strong&gt;minimal Graphql client request&lt;/strong&gt; with &lt;strong&gt;Spring Boot&lt;/strong&gt; and &lt;strong&gt;WebClient&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

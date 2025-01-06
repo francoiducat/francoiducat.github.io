@@ -3,33 +3,120 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d&rsquo;un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur) df -h : Affiche les informations sur le volume de stockage." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/" /><meta property="article:section" content="docs" />
+<meta name="description" content="
+  Day to day bash commands for developers
+  #
 
-<meta property="article:modified_time" content="2023-09-22T10:23:38+02:00" />
 
+
+  Bash commands
+  #
+
+
+cd folder_name entrer dans un dossier
+cd .. : revenir au dossier précédant
+cat file_name : affiche le contenu d&rsquo;un fichier
+pwd : dis moi où je suis !
+mkdir folder_name : créer un dossier
+cd / : Aller à la racine du serveur
+cd : Aller au répertoire de l&rsquo;utilisateur (la &ldquo;home directory&rdquo; de l&rsquo;utilisateur)
+df -h : Affiche les informations sur le volume de stockage. (h pour human)
+du -hd1 (anciennement du -h --max-depth=1): Affiche les informations sur le volume de stockage du répertoire dans lequel on se trouve.(&ldquo;disk free&rdquo;,&ldquo;disk usage&rdquo;)
+rmdir file_name : supprimer un dossier
+rmdir -rf file_name : supprimer un dossier non vide. Attention, cela supprime tous le contenu à l&rsquo;intérieur du dossier (sous dossiers et fichiers)
+touch nomdufichier : créer un fichier ou mettre à jour la date de modification sur un fichier existant.
+chmod 700 file_name : Modifier les permissions du fichier/dossier
+chmod 777 -R folder_name : Modifier les permissions du dossier ainsi que celles de tous les sous-dossiers et fichiers inclus
+chwon -R root:root folder_name : Modifie le propriétaire d&rsquo;un dossier (avec sous dossiers et fichiers inclus dans mondossier)
+passwd utilisateur: Changer le mot de passe de l&rsquo;utilisateur
+su - : Se connecter en root
+su -utilisateur : Se connecter avec utilisateur
+ls : Lister le contenu d&rsquo;un dossier
+ls -l (ou ll) : Liste le contenu d&rsquo;un dossier avec le détail (permission, user, group)
+ls -ltr : Afficher les fichiers du plus ancien au plus récent
+ls -a : Lister tout le contenu d&rsquo;un dossier (dont les fichiers cachés)
+ls -h : Lister les repertoires en affichant le volume des fichiers de manière &ldquo;lisible&rdquo;
+ls -t | head -n 1 : Liste le dernier le fichier édité. Ici, la commande &ldquo;head&rdquo; permet d&rsquo;afficher le nombre de ligne voulu par rapport au résultat de la commande ls (ici une seule ligne)
+ls -d */ : Lister UNIQUEMENT les repertoires.
+~/ : équivaut à /home/dossierUser
+ls -l &gt; ls-l.txt : Liste le contenu du répertoire dans le fichier ls-l.txt
+ls -l &gt; ls-l.txt 2&gt;&amp;1 : Liste uniquement les erreurs liés à la commande ls -l dans le fichier ls-l.txt
+scp -r /Users/john/Documents/mondossier/* user@IP:~/mondossier : Envoyer un fichier serveur dont le contenu des dossiers
+scp -P 5555 /Users/john/archive.tar.gz user@IP:~/mondossier : Envoyer un fichier compressé en spécifiant le port. (-P)
+cp -rp /var/tmp/prestashop_1.5.2.0  /var/www/html/ : Déplacer (=copier/coller) un répertoire d&rsquo;un emplacement A à un emplacement B en gardant les permissions des fichiers.
+tar -pczf nameoftarball.tar.gz directoryname/ Compresser et conserver les permissions des fichiers(-p)
+tar -xzvf nameoftarball.tar.gz : Décompresser une archive.
+[root@127.0.0.1 demo]#mv folder/* . : Déplace le contenu du dossier &ldquo;folder&rdquo; dans le dossier &ldquo;demo&rdquo;
+unzip package.zip -d /path/to/directory/to/unzip : Dézipper le contenu de &ldquo;package.zip&rdquo; en choisissant le répertoire de destination.
+gunzip -c backup.sql.gzip &gt; backup.sql : Extraire le fichier &ldquo;backup.sql.gzip&rdquo; pour contourner l&rsquo;erreur &ldquo;Gunzip unknwon suffix&rdquo;
+find / -name file.log : Recherche le fichier file.log à la racine
+find . -iname file.log : Recherche le fichier file.log dans le répertoire où l&rsquo;on se trouve.(case sensitive : sensible aux majuscules et minuscules)
+find . -iname php.ini : Recherche le fichier php.ini dans le répertoire où l&rsquo;on se trouve.(sans prendre en compte les majuscules et minuscules)
+find . -mtime -3 | grep test : Recherche les fichiers qui ont été modifié dans les 3 derniers jours et contenant &ldquo;test&rdquo; dans leur nom.
+find . -mtime &#43;3 | grep test : Recherche les fichiers qui ont été modifié il y a plus de 3 jours et contenant &ldquo;test&rdquo; dans leur nom.
+locate php.ini : Recherche le fichier php.ini sur le serveur
+grep -lR &quot;chaine de caractere&quot; * : Rechercher une chaine de caractère dans tous les fichiers du dossier dans lequel on se trouve.
+find /search/in/this/folder/ -type d -name &quot;wordpress&quot; : Recherche le répertoire intitulé &ldquo;wordpress&rdquo; dans le répertoire /search/in/this/folder/
+diff file1 file2 | more : Afficher les différences entre 2 fichiers;
+&gt; fileToPurge.txt : Effacer le contenu du fichier sans supprimer le fichier lui-même.
+grep -Ri --color motarecherche /repertoire/ou/rechercher/ : Rechercher un mot dans un repertoire sans prendre en compte la casse et en affichant le mot à rechercher en couleur.
+sed -i &#39;s/mot_a_rechercher/remplacé_par_celuici-meme/&#39; fichier_en_question.txt : Commande de rechercher/remplacer de &ldquo;mot_a_rechercher&rdquo; en &ldquo;remplacé_par_celuici-meme&rdquo; dans le fichier fichier_en_question.txt
+sed -i &#39;s/mot_a_rechercher/remplacé_par_celuici-meme/g&#39; fichier_en_question.txt : Commande de rechercher/remplacer de &ldquo;mot_a_rechercher&rdquo; en &ldquo;remplacé_par_celuici-meme&rdquo; dans le fichier fichier_en_question.txt. Le /g permet de rechercher/remplacer plusieurs occurences de &ldquo;mot_a_rechercher&rdquo; sur une même ligne.
+grep motarechercher/etc/php.ini : Rechercher motarechercher dans le fichier php.ini
+grep -v motaexclure/etc/php.ini : Rechercher TOUT sauf motarechercher dans le fichier php.ini
+history : affiche l&rsquo;historique des commandes
+history | grep install : Recherche dans l&rsquo;historique des commandes celles qui contiennent le mot install
+history -c : Efface l&rsquo;historique
+man command: Afficher les possibilités de la commande (Exemple: man ls)
+q : Quitter l&rsquo;écran
+exit : Log out le user
+clear : Rafraichir l&rsquo;écran
+shutdown -r now : Redémarrer le serveur
+uname -m : Déterminer si la version de Linux utilisée est en 32 bit ou 64 bit x86_64 &raquo;&gt; 64-bit kernel i686 &raquo;&gt; 32-bit kernel
+ps -fu $USER : Visualiser les USERS en activité.(&ldquo;process statistics&rdquo;)
+ps -ef | grep ftp : Visualiser les processus en activité contenant &ldquo;ftp&rdquo;
+service apache2 start &amp; : Exécuter un script en tâche de fond.
+env : Affiche les variables d&rsquo;environnement.
+top : Affiche les performances machines instantanées. Une fois dans le &ldquo;top&rdquo; en appuyant sur &ldquo;SHIFT 1&rdquo; permet d&rsquo;afficher les performances de chaque CPU.
+
+
+  Quick history search in terminal
+  #
+
+Common search history is a combination of history and grep key words :
+history | grep word_to_search">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/">
+  <meta property="og:site_name" content="FDUCAT Notebook">
+  <meta property="og:title" content="FDUCAT Notebook">
+  <meta property="og:description" content="Day to day bash commands for developers # Bash commands # cd folder_name entrer dans un dossier cd .. : revenir au dossier précédant cat file_name : affiche le contenu d’un fichier pwd : dis moi où je suis ! mkdir folder_name : créer un dossier cd / : Aller à la racine du serveur cd : Aller au répertoire de l’utilisateur (la “home directory” de l’utilisateur) df -h : Affiche les informations sur le volume de stockage. (h pour human) du -hd1 (anciennement du -h --max-depth=1): Affiche les informations sur le volume de stockage du répertoire dans lequel on se trouve.(“disk free”,“disk usage”) rmdir file_name : supprimer un dossier rmdir -rf file_name : supprimer un dossier non vide. Attention, cela supprime tous le contenu à l’intérieur du dossier (sous dossiers et fichiers) touch nomdufichier : créer un fichier ou mettre à jour la date de modification sur un fichier existant. chmod 700 file_name : Modifier les permissions du fichier/dossier chmod 777 -R folder_name : Modifier les permissions du dossier ainsi que celles de tous les sous-dossiers et fichiers inclus chwon -R root:root folder_name : Modifie le propriétaire d’un dossier (avec sous dossiers et fichiers inclus dans mondossier) passwd utilisateur: Changer le mot de passe de l’utilisateur su - : Se connecter en root su -utilisateur : Se connecter avec utilisateur ls : Lister le contenu d’un dossier ls -l (ou ll) : Liste le contenu d’un dossier avec le détail (permission, user, group) ls -ltr : Afficher les fichiers du plus ancien au plus récent ls -a : Lister tout le contenu d’un dossier (dont les fichiers cachés) ls -h : Lister les repertoires en affichant le volume des fichiers de manière “lisible” ls -t | head -n 1 : Liste le dernier le fichier édité. Ici, la commande “head” permet d’afficher le nombre de ligne voulu par rapport au résultat de la commande ls (ici une seule ligne) ls -d */ : Lister UNIQUEMENT les repertoires. ~/ : équivaut à /home/dossierUser ls -l &gt; ls-l.txt : Liste le contenu du répertoire dans le fichier ls-l.txt ls -l &gt; ls-l.txt 2&gt;&amp;1 : Liste uniquement les erreurs liés à la commande ls -l dans le fichier ls-l.txt scp -r /Users/john/Documents/mondossier/* user@IP:~/mondossier : Envoyer un fichier serveur dont le contenu des dossiers scp -P 5555 /Users/john/archive.tar.gz user@IP:~/mondossier : Envoyer un fichier compressé en spécifiant le port. (-P) cp -rp /var/tmp/prestashop_1.5.2.0 /var/www/html/ : Déplacer (=copier/coller) un répertoire d’un emplacement A à un emplacement B en gardant les permissions des fichiers. tar -pczf nameoftarball.tar.gz directoryname/ Compresser et conserver les permissions des fichiers(-p) tar -xzvf nameoftarball.tar.gz : Décompresser une archive. [root@127.0.0.1 demo]#mv folder/* . : Déplace le contenu du dossier “folder” dans le dossier “demo” unzip package.zip -d /path/to/directory/to/unzip : Dézipper le contenu de “package.zip” en choisissant le répertoire de destination. gunzip -c backup.sql.gzip &gt; backup.sql : Extraire le fichier “backup.sql.gzip” pour contourner l’erreur “Gunzip unknwon suffix” find / -name file.log : Recherche le fichier file.log à la racine find . -iname file.log : Recherche le fichier file.log dans le répertoire où l’on se trouve.(case sensitive : sensible aux majuscules et minuscules) find . -iname php.ini : Recherche le fichier php.ini dans le répertoire où l’on se trouve.(sans prendre en compte les majuscules et minuscules) find . -mtime -3 | grep test : Recherche les fichiers qui ont été modifié dans les 3 derniers jours et contenant “test” dans leur nom. find . -mtime &#43;3 | grep test : Recherche les fichiers qui ont été modifié il y a plus de 3 jours et contenant “test” dans leur nom. locate php.ini : Recherche le fichier php.ini sur le serveur grep -lR &#34;chaine de caractere&#34; * : Rechercher une chaine de caractère dans tous les fichiers du dossier dans lequel on se trouve. find /search/in/this/folder/ -type d -name &#34;wordpress&#34; : Recherche le répertoire intitulé “wordpress” dans le répertoire /search/in/this/folder/ diff file1 file2 | more : Afficher les différences entre 2 fichiers; &gt; fileToPurge.txt : Effacer le contenu du fichier sans supprimer le fichier lui-même. grep -Ri --color motarecherche /repertoire/ou/rechercher/ : Rechercher un mot dans un repertoire sans prendre en compte la casse et en affichant le mot à rechercher en couleur. sed -i &#39;s/mot_a_rechercher/remplacé_par_celuici-meme/&#39; fichier_en_question.txt : Commande de rechercher/remplacer de “mot_a_rechercher” en “remplacé_par_celuici-meme” dans le fichier fichier_en_question.txt sed -i &#39;s/mot_a_rechercher/remplacé_par_celuici-meme/g&#39; fichier_en_question.txt : Commande de rechercher/remplacer de “mot_a_rechercher” en “remplacé_par_celuici-meme” dans le fichier fichier_en_question.txt. Le /g permet de rechercher/remplacer plusieurs occurences de “mot_a_rechercher” sur une même ligne. grep motarechercher/etc/php.ini : Rechercher motarechercher dans le fichier php.ini grep -v motaexclure/etc/php.ini : Rechercher TOUT sauf motarechercher dans le fichier php.ini history : affiche l’historique des commandes history | grep install : Recherche dans l’historique des commandes celles qui contiennent le mot install history -c : Efface l’historique man command: Afficher les possibilités de la commande (Exemple: man ls) q : Quitter l’écran exit : Log out le user clear : Rafraichir l’écran shutdown -r now : Redémarrer le serveur uname -m : Déterminer si la version de Linux utilisée est en 32 bit ou 64 bit x86_64 »&gt; 64-bit kernel i686 »&gt; 32-bit kernel ps -fu $USER : Visualiser les USERS en activité.(“process statistics”) ps -ef | grep ftp : Visualiser les processus en activité contenant “ftp” service apache2 start &amp; : Exécuter un script en tâche de fond. env : Affiche les variables d’environnement. top : Affiche les performances machines instantanées. Une fois dans le “top” en appuyant sur “SHIFT 1” permet d’afficher les performances de chaque CPU. Quick history search in terminal # Common search history is a combination of history and grep key words : history | grep word_to_search">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2023-09-22T10:23:38+02:00">
 <title>Day to Day Bash Commands | FDUCAT Notebook</title>
+<link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c57387979875eda56795e26a24eb84eef6fbaf2a9b13f1910eca14c6e3da4194.css" integrity="sha256-xXOHl5h17aVnleJqJOuE7vb7ryqbE/GRDsoUxuPaQZQ=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.9a88369b7d3cf25c4e84b05969b98fa095cfc7a4731b4f567bdf923848dbe5b1.js" integrity="sha256-mog2m3088lxOhLBZabmPoJXPx6RzG09We9&#43;SOEjb5bE=" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://francoiducat.github.io/docs/devops/day-to-day-bash-commands/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.e7cc925b4ee4af3ac2063a966dcf2e4169949d3773db84e8507af76187605f18.js" integrity="sha256-58ySW07krzrCBjqWbc8uQWmUnTdz24ToUHr3YYdgXxg=" crossorigin="anonymous"></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-PXY5L88X6W', { 'anonymize_ip': false });
-}
-</script>
-<!--
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXY5L88X6W"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PXY5L88X6W');
+        }
+      </script><!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
@@ -49,11 +136,12 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -66,7 +154,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
 
 
 
@@ -291,7 +378,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
   
 <ul>
   
@@ -328,7 +414,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Day to Day Bash Commands</strong>
+  <h3>Day to Day Bash Commands</h3>
 
   <label for="toc-control">
     
@@ -377,7 +463,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="day-to-day-bash-commands-for-developers">
+  <article class="markdown book-article"><h1 id="day-to-day-bash-commands-for-developers">
   Day to day bash commands for developers
   <a class="anchor" href="#day-to-day-bash-commands-for-developers">#</a>
 </h1>
@@ -589,7 +675,7 @@ registry=https://your-custom-npm-registry.com/</p>
 
 
   <div><a class="flex align-center" href="https://github.com/francoiducat/francoiducat.github.io.sources/commit/20874b764b095a233f136a281f84e8f25fd12c7f" title='Last modified by francoiducat | Sep 22, 2023' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <img src="/svg/calendar.svg" class="book-icon" alt="" />
       <span>Sep 22, 2023</span>
     </a>
   </div>
